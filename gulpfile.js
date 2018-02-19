@@ -6,6 +6,7 @@ var browserSync = require('browser-sync').create();
 var del = require('del');
 var sass = require('gulp-sass');
 var gcmq = require('gulp-group-css-media-queries');
+var svgSprite = require('gulp-svg-sprite');
 var processors = [
 	autoprefixer({browsers: ['last 2 version']})
 ];
@@ -22,6 +23,19 @@ gulp.task('yaml', function(){
 		.pipe(yaml())
 		.pipe(gulp.dest('build/assets'))
 })
+
+// Basic configuration example
+var config = {
+	mode: {
+		symbol: true // Activate the «symbol» mode
+	}
+};
+
+gulp.task('sprites', function () {
+	return gulp.src('src/assets/svg/*.svg')
+		.pipe(svgSprite(config))
+		.pipe(gulp.dest('build/assets/svg'));
+});
 
 gulp.task('html', function(){
 	return gulp.src(['src/**/*.pug', ...ignorePug])
@@ -66,7 +80,7 @@ gulp.task('watch', function() {
 
 gulp.task('copy', function(){
 	return gulp.src([
-			'src/assets/**/*.{jpg,png,jpeg,svg,gif}'
+			'src/assets/**/*.{jpg,png,jpeg,gif}'
 		])
 	.pipe(gulp.dest('build/assets'))
 });
@@ -75,7 +89,7 @@ gulp.task('clean', function() {
 	return del('build');
 });
 
-gulp.task('build', gulp.parallel('html', 'sass', 'yaml', 'js', 'copy'));
+gulp.task('build', gulp.parallel('html', 'sass', 'sprites', 'yaml', 'js', 'copy'));
 gulp.task('start', gulp.parallel('watch', 'serve'));
 
 gulp.task('default', gulp.series('clean', 'build', 'start'));

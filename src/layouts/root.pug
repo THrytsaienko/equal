@@ -2,16 +2,13 @@ include ../../node_modules/bemto.pug/bemto
 include ../globals/common
 include ../globals/data
 include ../globals/mixins
-
 include ../blocks/all
 
-block params
-	- var pageTitle = "main"
-   
+
 doctype html
 html
 	head
-		title= pageTitle
+		title EQUAL
 		block meta
 		block styles
 	body
