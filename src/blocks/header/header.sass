@@ -4,9 +4,8 @@
 
 .header
 	width: 100%
-	background-color: #000
+	background-color: transparent
 	background-color: blue
-	height: 115px
 	&__container
 		width: 100%
 		max-width: 1200px
@@ -16,12 +15,91 @@
 		align-items: flex-start
 	.menu
 		padding-top: 30px
+		&__toggler
+		&__icon
+			width: 20px
+			height: 20px
+			fill: #000
+		&__text
+			text-transform: uppercase
+			font-weight: 700
+			color: #000
 	&__logo
-		padding-top: 30px
+		padding-top: 28px
+		padding-bottom: 60px
 	&__social-icons
 		padding-top: 30px
-	&__facebook-icon,
-	&__instagram-icon
+		visibility: hidden
+	&__icon
 		width: 25px
 		height: 25px
 		fill: #fff
+		margin-left: 20px
+	&__cross-icon
+		display: none
+	&_dark
+		width: 100%
+		background-color: #000
+	&_dark &
+		&__container
+			width: 100%
+			max-width: 1200px
+			margin: 0 auto
+			display: flex
+			justify-content: space-between
+			align-items: flex-start
+		.menu
+			padding-top: 30px
+			&__icon
+				width: 20px
+				height: 20px
+				fill: #fff
+			&__text
+				text-transform: uppercase
+				font-weight: 700
+		&__logo
+			padding-top: 28px
+			padding-bottom: 60px
+		&__social-icons
+			padding-top: 30px
+		&__icon
+			width: 25px
+			height: 25px
+			fill: #fff
+			margin-left: 20px
+		&__cross-icon
+			display: none
+	&--gallery
+		width: 100%
+		background-color: #fff
+		&__--gallery__container
+			width: 100%
+			max-width: 1200px
+			margin: 0 auto
+			display: flex
+			justify-content: space-between
+			align-items: flex-start
+		.menu
+			padding-top: 30px
+			&__icon
+				width: 20px
+				height: 20px
+				fill: #000
+			&__text
+				text-transform: uppercase
+				font-weight: 700
+		&__logo
+			padding-top: 28px
+			padding-bottom: 60px
+		&__social-icons
+			padding-top: 30px
+		&__icon
+			display: none
+			width: 25px
+			height: 25px
+			fill: #000
+			margin-left: 20px
+		&__cross-icon
+			display: block
+	&__burger
+		display: none

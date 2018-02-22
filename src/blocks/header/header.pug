@@ -1,12 +1,21 @@
-mixin b-header()
-	+b.header
+include ../../globals/mixins.pug
+
+mixin b-header(classes)
+	+b.header(class=classes)
 		+e.container
-			+b.menu
-				+e.icon
-				+e('p').text Меню
+			+e.menu
+				+b-menu()
 			+e('img').logo(src='assets/i/logo.png')
 			+e.social-icons
-				+e('svg').facebook-icon
+				+e('svg').icon._facebook
 					use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#facebook'))
-				+e('svg').instagram-icon
+				+e('svg').icon._instagram
 					use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#instagram'))
+				+e('svg').icon._cross
+					use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#cross'))
+		+e.burger(id='burger')
+			+b('ul').languages
+				+e('li').ru ру
+				+e('li').ua укр
+				+e('li').en en
+				
