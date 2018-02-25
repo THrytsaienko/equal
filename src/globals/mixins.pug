@@ -4,3 +4,12 @@ mixin b-menu
 			+e('svg').icon
 				use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#menu'))
 				+e('span').text Меню
+
+mixin b-social-icons
+	+b.social-icons
+		+e('svg').icon._facebook
+			use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#facebook'))
+		+e('svg').icon._instagram
+			use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#instagram'))
+		+e('svg').icon._cross
+			use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#cross'))

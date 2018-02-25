@@ -31,17 +31,54 @@
 	&__logo-right-b
 		display: none
 	&__social-icons
-		padding-top: 30px
-		visibility: hidden
-	&__icon
-		width: 25px
-		height: 25px
-		fill: #000
-		margin-left: 20px
-		&_cross
-			display: none
+		.social-icons
+			padding-top: 30px
+			visibility: hidden
+			&__icon
+				width: 25px
+				height: 25px
+				fill: #000
+				margin-left: 20px
+				&_cross
+					display: none
 	&__burger
-		display: none
+		// display: none
+		display: block
+		background-color: #fff
+	&__lang-item
+		display: inline-block
+		margin-right: 18px
+		margin-bottom: 80px
+	.ru
+		color: #000
+	.ua,
+	.en
+		color: gray
+	&__item
+		margin-bottom: 27px
+	&__link
+		text-decoration: none
+		text-transform: uppercase
+		color: #000
+		font-weight: 700
+		font-size: 24px
+	&__email,
+	&__phone
+		color: #000
+		margin-bottom: 15px
+	&__email
+		margin-top: 75px
+	&__social-icons
+		.social-icons
+			visibility: visible
+			margin-top: 30px
+			&__icon
+				color: #000
+				&-facebook,
+				&-instagram
+					visibility: visible
+				&-cross
+					visibility: hidden
 
 .header_dark
 	width: 100%
@@ -76,20 +113,21 @@
 		&__logo-right-b
 			display: inline
 		&__social-icons
-			padding-top: 30px
-			visibility: visible
-		&__icon
-			width: 25px
-			height: 25px
-			fill: #000
-			margin-left: 20px
-			&_facebook,
-			&_instagram
-				visibility: hidden
-			&_facebook
-				display: none
-			&_cross
-				display: inline
+			.social-icons
+				padding-top: 30px
+				visibility: visible
+				&__icon
+					width: 25px
+					height: 25px
+					fill: #000
+					margin-left: 20px
+					&_facebook,
+					&_instagram
+						visibility: hidden
+					&_facebook
+						display: none
+					&_cross
+						display: inline
 		&__burger
 			display: none
 
@@ -126,17 +164,18 @@
 		&__logo-right-b
 			display: none
 		&__social-icons
-			padding-top: 30px
-			visibility: visible
-		&__icon
-			width: 25px
-			height: 25px
-			fill: #fff
-			margin-left: 20px
-			&_facebook,
-			&_instagram
-				display: inline
-			&_cross
-				display: none
+			.social-icons
+				padding-top: 30px
+				visibility: visible
+				&__icon
+					width: 25px
+					height: 25px
+					fill: #fff
+					margin-left: 20px
+					&_facebook,
+					&_instagram
+						display: inline
+					&_cross
+						display: none
 		&__burger
 			display: none
