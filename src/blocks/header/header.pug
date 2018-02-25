@@ -5,7 +5,11 @@ mixin b-header(classes)
 		+e.container
 			+e.menu
 				+b-menu()
-			+e('img').logo(src='assets/i/logo.png')
+			+e.logo
+				+e('img').logo-left-b(src='assets/i/logo-left-black.png')
+				+e('img').logo-left-w(src='assets/i/logo-left-white.png')
+				+e('img').logo-right-b(src='assets/i/logo-right-black.png')
+				+e('img').logo-right-w(src='assets/i/logo-right-white.png')
 			+e.social-icons
 				+e('svg').icon._facebook
 					use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#facebook'))

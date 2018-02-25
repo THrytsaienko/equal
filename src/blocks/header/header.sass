@@ -5,7 +5,6 @@
 .header
 	width: 100%
 	background-color: transparent
-	background-color: blue
 	&__container
 		width: 100%
 		max-width: 1200px
@@ -13,34 +12,41 @@
 		display: flex
 		justify-content: space-between
 		align-items: flex-start
-	.menu
-		padding-top: 30px
-		&__toggler
-		&__icon
-			width: 20px
-			height: 20px
-			fill: #000
-		&__text
-			text-transform: uppercase
-			font-weight: 700
-			color: #000
+	&__menu
+		.menu
+			padding-top: 27px
+			&__icon
+				width: 20px
+				height: 20px
+				fill: #000
+				margin-bottom: -4px
+			&__text
+				text-transform: uppercase
+				font-weight: 700
+				color: #000
 	&__logo
 		padding-top: 28px
 		padding-bottom: 60px
+	&__logo-left-w,
+	&__logo-right-b
+		display: none
 	&__social-icons
 		padding-top: 30px
 		visibility: hidden
 	&__icon
 		width: 25px
 		height: 25px
-		fill: #fff
+		fill: #000
 		margin-left: 20px
-	&__cross-icon
+		&_cross
+			display: none
+	&__burger
 		display: none
-	&_dark
-		width: 100%
-		background-color: #000
-	&_dark &
+
+.header_dark
+	width: 100%
+	background-color: transparent
+	.header
 		&__container
 			width: 100%
 			max-width: 1200px
@@ -48,58 +54,89 @@
 			display: flex
 			justify-content: space-between
 			align-items: flex-start
-		.menu
-			padding-top: 30px
-			&__icon
-				width: 20px
-				height: 20px
-				fill: #fff
-			&__text
-				text-transform: uppercase
-				font-weight: 700
+		&__menu
+			.menu
+				padding-top: 27px
+				&__icon
+					width: 20px
+					height: 20px
+					fill: #000
+					margin-bottom: -4px
+				&__text
+					text-transform: uppercase
+					font-weight: 700
+					color: #000
 		&__logo
 			padding-top: 28px
 			padding-bottom: 60px
+		&__logo-left-w,
+		&__logo-right-w
+			display: none
+		&__logo-left-b,
+		&__logo-right-b
+			display: inline
 		&__social-icons
 			padding-top: 30px
+			visibility: visible
 		&__icon
 			width: 25px
 			height: 25px
-			fill: #fff
+			fill: #000
 			margin-left: 20px
-		&__cross-icon
+			&_facebook,
+			&_instagram
+				visibility: hidden
+			&_facebook
+				display: none
+			&_cross
+				display: inline
+		&__burger
 			display: none
-	&--gallery
-		width: 100%
-		background-color: #fff
-		&__--gallery__container
+
+.header_white
+	width: 100%
+	background-color: #000
+	.header
+		&__container
 			width: 100%
 			max-width: 1200px
 			margin: 0 auto
 			display: flex
 			justify-content: space-between
 			align-items: flex-start
-		.menu
-			padding-top: 30px
-			&__icon
-				width: 20px
-				height: 20px
-				fill: #000
-			&__text
-				text-transform: uppercase
-				font-weight: 700
+		&__menu
+			.menu
+				padding-top: 27px
+				&__icon
+					width: 20px
+					height: 20px
+					fill: #fff
+					margin-bottom: -4px
+				&__text
+					text-transform: uppercase
+					font-weight: 700
+					color: #fff
 		&__logo
 			padding-top: 28px
 			padding-bottom: 60px
+		&__logo-left-w,
+		&__logo-right-w
+			display: inline
+		&__logo-left-b,
+		&__logo-right-b
+			display: none
 		&__social-icons
 			padding-top: 30px
+			visibility: visible
 		&__icon
-			display: none
 			width: 25px
 			height: 25px
-			fill: #000
+			fill: #fff
 			margin-left: 20px
-		&__cross-icon
-			display: block
-	&__burger
-		display: none
+			&_facebook,
+			&_instagram
+				display: inline
+			&_cross
+				display: none
+		&__burger
+			display: none
