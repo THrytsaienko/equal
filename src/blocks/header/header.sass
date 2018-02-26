@@ -20,6 +20,7 @@
 				height: 20px
 				fill: #000
 				margin-bottom: -4px
+				cursor: pointer
 			&__text
 				text-transform: uppercase
 				font-weight: 700
@@ -30,8 +31,8 @@
 	&__logo-left-w,
 	&__logo-right-b
 		display: none
-	&__social-icons
-		.social-icons
+	&__icons
+		.icons
 			padding-top: 30px
 			visibility: hidden
 			&__icon
@@ -42,20 +43,27 @@
 				&_cross
 					display: none
 	&__burger
-		// display: none
-		display: block
-		background-color: #fff
+		display: none
+		// background-color: #fff
+		opacity: 0
+		background-color: yellowgreen
+		margin-top: -30px
+		padding-left: 177px
+		width: 490px
+		height: 530px
+		transform: translateX(-1000px)
 	&__lang-item
 		display: inline-block
 		margin-right: 18px
 		margin-bottom: 80px
-	.ru
-		color: #000
-	.ua,
-	.en
 		color: gray
+		&.active
+			color: #000
 	&__item
 		margin-bottom: 27px
+		list-style: none
+		.active
+			border-bottom: 3px solid #000
 	&__link
 		text-decoration: none
 		text-transform: uppercase
@@ -68,12 +76,14 @@
 		margin-bottom: 15px
 	&__email
 		margin-top: 75px
-	&__social-icons
-		.social-icons
+	&__burger &__icons
+		.icons
 			visibility: visible
 			margin-top: 30px
 			&__icon
 				color: #000
+				margin-left: 0px
+				margin-right: 20px
 				&-facebook,
 				&-instagram
 					visibility: visible
@@ -112,8 +122,8 @@
 		&__logo-left-b,
 		&__logo-right-b
 			display: inline
-		&__social-icons
-			.social-icons
+		&__icons
+			.icons
 				padding-top: 30px
 				visibility: visible
 				&__icon
@@ -163,8 +173,8 @@
 		&__logo-left-b,
 		&__logo-right-b
 			display: none
-		&__social-icons
-			.social-icons
+		&__icons
+			.icons
 				padding-top: 30px
 				visibility: visible
 				&__icon

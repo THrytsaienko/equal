@@ -1,6 +1,7 @@
 include ../../globals/mixins.pug
+include ../../globals/data.pug
 
-mixin b-header(classes)
+mixin b-header(classes, langs)
 	+b.header(class=classes)
 		+e.container
 			+e.menu
@@ -10,21 +11,23 @@ mixin b-header(classes)
 				+e('img').logo-left-w(src='assets/i/logo-left-white.png')
 				+e('img').logo-right-b(src='assets/i/logo-right-black.png')
 				+e('img').logo-right-w(src='assets/i/logo-right-white.png')
-			+e.social-icons
-				+b-social-icons()
+			+e.icons
+				+b-icons()
 		+e.burger(id='burger')
 			+e('ul').languages
-				+e('li').lang-item.ru ру
-				+e('li').lang-item.ua ук
-				+e('li').lang-item.en en
+				+e('li').lang-item.active ру
+				+e('li').lang-item ук
+				+e('li').lang-item en
+			//- each lang-item in langs
+			//- 	+e('li')(class= lang-item.class)= lang-item.text
 			+e('ul').list
 				+e('li').item
-					+e('a').link(href='gallery.pug') Галерея
+					+e('a').link.active(href='gallery.pug') Галерея
 				+e('li').item
 					+e('a').link(href='#') О нас
 				+e('li').item
 					+e('a').link(href='#') Блог
 			+e('p').email eqlagency@gmail.com
 			+e('p').phone +38 050 571 69 06
-			+e.social-icons
-				+b-social-icons()
+			+e.icons
+				+b-icons()
