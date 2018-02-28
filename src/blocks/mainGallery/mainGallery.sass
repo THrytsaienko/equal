@@ -14,6 +14,7 @@ $gutter: 10px
 	&__header
 		margin: 0px $gutter 50px $gutter
 		display: flex
+	&__collection
 	&__counter
 		flex-basis: 15%
 	&__title
@@ -22,10 +23,14 @@ $gutter: 10px
 		flex-basis: 35%
 	&__description
 		flex-basis: 35%
+		@media #{$phone}, #{$tablet-port} 
+			display: none
 	&__total
 		flex-basis: 15%
 		text-transform: uppercase
 		text-align: right		
+		@media #{$phone}, #{$tablet-port} 
+			display: none
 	&__picture
 		&_xs
 			width: $xs-pic*3
@@ -46,15 +51,16 @@ $gutter: 10px
 		background-color: black
 		color: white
 		margin: 0 auto
+		@media #{$phone}, #{$tablet-port}
+			max-width: 100%
 
 /* ---- isotope grid structure---- */
 .grid
 	max-width: $gallery-width
 .grid:after
-  content: ''
-  display: block
-  clear: both
+	content: ''
+	display: block
+	clear: both
 /* ---- .grid-item ---- */
 .grid-item
-  float: left
-  border: $gutter solid white;
+	border: $gutter solid white;
