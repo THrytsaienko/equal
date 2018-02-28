@@ -6,7 +6,6 @@ mixin b-mainGallery(data)
 			+e("p").description= data.description 
 			+e("p").total= data.total  
 		+e.collection.grid
-			+e.pic.grid-sizer
 			each picture in data.pictures 
 				+e("a").link(href="#")
 					//- +e.pic.grid-item(class=picture.class) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque ab, dignissimos facilis deserunt error incidunt fugiat accusamus fuga nisi perspiciatis.

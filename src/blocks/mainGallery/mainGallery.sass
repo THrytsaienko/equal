@@ -12,7 +12,7 @@ $gutter: 10px
 	max-width: $gallery-width
 	margin: 0px auto
 	&__header
-		margin: 0px 10px 50px
+		margin: 0px $gutter 50px $gutter
 		display: flex
 	&__counter
 		flex-basis: 15%
@@ -26,9 +26,19 @@ $gutter: 10px
 		flex-basis: 15%
 		text-transform: uppercase
 		text-align: right		
-	&__collection
-		background-color: grey
 	&__picture
+		&_xs
+			width: $xs-pic*3
+			height: $xs-pic*3
+		&_sm
+			width: $xs-pic*6
+			height: $xs-pic*3
+		&_md
+			width: $xs-pic*4
+			height: $xs-pic*5
+		&_lg
+			width: $xs-pic*6
+			height: $xs-pic*6
 	&__btn
 		text-align: center
 		padding: 10px 5px
@@ -37,9 +47,9 @@ $gutter: 10px
 		color: white
 		margin: 0 auto
 
+/* ---- isotope grid structure---- */
 .grid
 	max-width: $gallery-width
-	background-color: grey
 .grid:after
   content: ''
   display: block
@@ -47,17 +57,4 @@ $gutter: 10px
 /* ---- .grid-item ---- */
 .grid-item
   float: left
-  background-color: purple
   border: $gutter solid white;
-.main-gallery__link_xs
-	width: $xs-pic*3
-	height: $xs-pic*3
-.main-gallery__link_sm
-	width: $xs-pic*6
-	height: $xs-pic*3
-.main-gallery__link_md
-	width: $xs-pic*4
-	height: $xs-pic*5
-.main-gallery__link_lg
-	width: $xs-pic*6
-	height: $xs-pic*6
