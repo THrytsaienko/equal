@@ -69,6 +69,7 @@ gulp.task('watch', function() {
 	gulp.watch('src/**/*.pug', gulp.series('html', reload));
 	gulp.watch('src/**/*.sass', gulp.series('sass'));
 	gulp.watch('src/**/*.js', gulp.series('js', reload));
+	gulp.watch('src/**/*.js', gulp.series('scripts', reload));
 });
 
 gulp.task('copy', function(){

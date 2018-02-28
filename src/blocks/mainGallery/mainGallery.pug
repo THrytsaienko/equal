@@ -6,9 +6,11 @@ mixin b-mainGallery(data)
 			+e("p").description= data.description 
 			+e("p").total= data.total  
 		+e.collection.grid
+			+e.pic.grid-sizer
 			each picture in data.pictures 
-				//- +e("a").link(href="#")
-				+e("img").picture.grid-item(class=picture.class src=asset(picture.img))
+				+e("a").link(href="#")
+					//- +e.pic.grid-item(class=picture.class) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque ab, dignissimos facilis deserunt error incidunt fugiat accusamus fuga nisi perspiciatis.
+					+e("img").picture.grid-item(class=picture.class src=asset(picture.img))
 		+e.btn= data.btn
 
 -
@@ -22,33 +24,33 @@ mixin b-mainGallery(data)
 				[
 					{
 						img: "i/lobby.jpg", 
-						class: "main-gallery__link_lg"
+						class: "main-gallery__link_lg",
+						classT: "width2 height2"
 					},
 					{
 						img: "i/food_serve.jpg", 
-						class: "main-gallery__link_xs"
+						class: "main-gallery__link_xs",
 					},
 					{
 						img: "i/rest_supply.jpg", 
-						class: "main-gallery__link_xs"
+						class: "main-gallery__link_xs",
 					},
 					{
 						img: "i/trip.jpg", 
-						class: "main-gallery__link_sm"
+						class: "main-gallery__link_sm",
 					},
 					{
 						img: "i/tesla.jpg", 
-						class: "main-gallery__link_md"
+						class: "main-gallery__link_md",
 					},
 					{
 						img: "i/wedding.jpg", 
-						class: "main-gallery__link_md"
+						class: "main-gallery__link_md",
 					},
 					{
 						img: "i/food_dish.jpg", 
-						class: "main-gallery__link_md"
+						class: "main-gallery__link_md",
 					},
-
 				],
 			btn: "ВСІ РОБОТИ"
 		}

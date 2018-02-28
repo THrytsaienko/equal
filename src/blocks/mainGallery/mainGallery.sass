@@ -1,14 +1,18 @@
 @import '../../assets/s/variables'
-$xs-pic: 50px
-$gallery-width: 80%
+$gallery-width: 800px
+$xs-pic: $gallery-width/12
+$gutter: 10px
+
+*
+	box-sizing: border-box
 // breakpoints
 // $phone, $tablet-port, $tablet-land, $desktopXS, $desktopMD, $desktopXL
 
 .main-gallery
-	width: $gallery-width
+	max-width: $gallery-width
 	margin: 0px auto
 	&__header
-		background-color: blue
+		margin: 0px 10px 50px
 		display: flex
 	&__counter
 		flex-basis: 15%
@@ -24,10 +28,6 @@ $gallery-width: 80%
 		text-align: right		
 	&__collection
 		background-color: grey
-	// &__link
-		// margin: 10px
-		// margin: 0px
-		// padding: 0px
 	&__picture
 	&__btn
 		text-align: center
@@ -37,29 +37,27 @@ $gallery-width: 80%
 		color: white
 		margin: 0 auto
 
-// width 12
-// 3/3/6 *2
-// 6/6 *2
-// 4/4/4 *4/3
-
-// height 12
-// 7/2.5/2.5 
-// 7/5
+.grid
+	max-width: $gallery-width
+	background-color: grey
 .grid:after
-	content: '';
-	display: block;
-	clear: both;
+  content: ''
+  display: block
+  clear: both
+/* ---- .grid-item ---- */
+.grid-item
+  float: left
+  background-color: purple
+  border: $gutter solid white;
 .main-gallery__link_xs
 	width: $xs-pic*3
 	height: $xs-pic*3
-
 .main-gallery__link_sm
 	width: $xs-pic*6
 	height: $xs-pic*3
-	// align-self: top
 .main-gallery__link_md
 	width: $xs-pic*4
 	height: $xs-pic*5
 .main-gallery__link_lg
 	width: $xs-pic*6
-	height: $xs-pic*7
+	height: $xs-pic*6
