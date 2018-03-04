@@ -10,10 +10,14 @@ mixin b-header(menuList, languagesList, socialList, classes)
 					use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#menu'))
 				+e('span').menu-text Меню
 			+e.logo
-				+e('img').logo-left-b(src='assets/i/logo-left-black.png')
-				+e('img').logo-left-w(src='assets/i/logo-left-white.png')
-				+e('img').logo-right-b(src='assets/i/logo-right-black.png')
-				+e('img').logo-right-w(src='assets/i/logo-right-white.png')
+				+e('a').link(href="index.html")
+					+e('img').logo-left-b(src='assets/i/logo-left-black.png')
+				+e('a').link(href="index.html")
+					+e('img').logo-left-w(src='assets/i/logo-left-white.png')
+				+e('a').link(href="index.html")
+					+e('img').logo-right-b(src='assets/i/logo-right-black.png')
+				+e('a').link(href="index.html")
+					+e('img').logo-right-w(src='assets/i/logo-right-white.png')
 			+e.icons
 				+b-icons(socialList)
 		+e.burger(id='burger')
