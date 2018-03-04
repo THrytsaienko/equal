@@ -19,11 +19,11 @@ const ignorePug = [
 	'!src/globals/**'
 ];
 
-// gulp.task('yaml', function(){
-	// return gulp.src('src/**/*.yml')
-	// 	.pipe(yaml())
-	// 	.pipe(gulp.dest('build/assets'))
-// })
+gulp.task('yaml', function(){
+	return gulp.src('src/**/*.yml')
+		.pipe(yaml())
+		.pipe(gulp.dest('build/assets'))
+})
 
 // Basic configuration example
 var config = {
