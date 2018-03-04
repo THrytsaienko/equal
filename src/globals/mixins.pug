@@ -1,17 +1,20 @@
-mixin b-menu
+mixin b-menu(menuList)
 	+b.menu
-		+e('span').toggler
-			+e('svg').icon.open(id="menu-icon")
-				use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#menu'))
-				+e('span').text Меню
+		+e('ul').list
+			each it in menuList
+				+e('li').item
+					+e('a').link(href= it.href, class= it.class)= it.text
+				
 
-mixin b-icons
+mixin b-icons(socialList)
 	+b.icons
-		+e('a').link(href='#')
-			+e('svg').icon._facebook
-				use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#facebook'))
-		+e('a').link(href='#')
-			+e('svg').icon._instagram
-				use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#instagram'))
-		+e('svg').icon._cross
-			use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#cross'))
+		each item in socialList
+			+e('a').link(href= item.href)
+				+e('svg')(class= item.class)
+					use(xlink:href=asset(item.svg))
+
+mixin b-languages(languagesList)
+	+b.languages
+		+e('ul').list
+			each item in languagesList
+				+e('li')(class= item.class)= item.text

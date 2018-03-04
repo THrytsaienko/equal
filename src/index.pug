@@ -1,6 +1,6 @@
 extends layouts/main
 
 block content
-    +b-header()
-    +b-header('_dark')
-    +b-header('_white')
+    +b-header(menuList, languagesList, socialList)
+    +b-header(menuList, languagesList, socialList, '_dark')
+    +b-header(menuList, languagesList, socialList, '_white')
