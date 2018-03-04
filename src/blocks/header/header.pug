@@ -1,5 +1,6 @@
 include ../../globals/data
 include ../../globals/mixins
+include ../social-icons/social-icons
 
 
 mixin b-header(menuList, languagesList, socialList, classes)
@@ -19,7 +20,7 @@ mixin b-header(menuList, languagesList, socialList, classes)
 				+e('a').link(href="index.html")
 					+e('img').logo-right-w(src='assets/i/logo-right-white.png')
 			+e.icons
-				+b-icons(socialList)
+				+b-social-icons(socialList)
 		+e.burger(id='burger')
 			+e.languages
 				+e('ul').list
@@ -31,4 +32,4 @@ mixin b-header(menuList, languagesList, socialList, classes)
 			+e('p').email eqlagency@gmail.com
 			+e('p').phone +38 050 571 69 06
 			+e.icons
-				+b-icons(socialList)
+				+b-social-icons(socialList)

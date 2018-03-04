@@ -4,11 +4,3 @@ mixin b-menu(menuList)
 			each it in menuList
 				+e('li').item
 					+e('a').link(href= it.href, class= it.class)= it.text
-				
-
-mixin b-icons(socialList)
-	+b.icons
-		each item in socialList
-			+e('a').link(href= item.href)
-				+e('svg')(class= item.class)
-					use(xlink:href=asset(item.svg))
