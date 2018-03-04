@@ -12,9 +12,3 @@ mixin b-icons(socialList)
 			+e('a').link(href= item.href)
 				+e('svg')(class= item.class)
 					use(xlink:href=asset(item.svg))
-
-mixin b-languages(languagesList)
-	+b.languages
-		+e('ul').list
-			each item in languagesList
-				+e('li')(class= item.class)= item.text

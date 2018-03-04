@@ -22,7 +22,10 @@ mixin b-header(menuList, languagesList, socialList, classes)
 				+b-icons(socialList)
 		+e.burger(id='burger')
 			+e.languages
-				+b-languages(languagesList)
+				+e('ul').list
+					each lang in languagesList
+						+e('li').item
+							+e('a').link(class= lang.class, href= lang.ref)= lang.text
 			+e.menu
 				+b-menu(menuList)
 			+e('p').email eqlagency@gmail.com
