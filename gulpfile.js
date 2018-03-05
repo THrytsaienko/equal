@@ -90,7 +90,7 @@ gulp.task('clean', function() {
 	return del('build');
 });
 
-gulp.task('build', gulp.parallel('html', 'sass', 'yaml', 'js', 'sprites', 'js', 'copy'));
+gulp.task('build', gulp.parallel('html', 'sass', 'yaml', 'sprites', 'js', 'copy'));
 gulp.task('start', gulp.parallel('watch', 'serve'));
 
 gulp.task('default', gulp.series('clean', 'build', 'start'));
