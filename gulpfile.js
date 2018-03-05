@@ -19,6 +19,12 @@ const ignorePug = [
 	'!src/globals/**'
 ];
 
+gulp.task('scripts', function() {
+  return gulp.src('src/blocks/**/*.js')
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('build/assets'));
+});
+
 gulp.task('yaml', function(){
 	return gulp.src('src/**/*.yml')
 		.pipe(yaml())
@@ -90,7 +96,8 @@ gulp.task('clean', function() {
 	return del('build');
 });
 
-gulp.task('build', gulp.parallel('html', 'sass', 'sprites', 'js', 'copy'));
+gulp.task('build', gulp.parallel('html', 'sass', 'yaml', 'js', 'scripts', 'copy'));
+
 gulp.task('start', gulp.parallel('watch', 'serve'));
 
 gulp.task('default', gulp.series('clean', 'build', 'start'));
