@@ -5,5 +5,5 @@ mixin b-social-icons(socialList)
 	+b.icons
 		each item in socialList
 			+e('a').link(href= item.href)
-				+e('svg')(class= item.class)
+				svg(class= item.class)
 					use(xlink:href=asset(item.svg))
