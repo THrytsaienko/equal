@@ -1,2 +1,36 @@
-mixin b-header()
-	+b.header
+include ../../globals/data
+include ../../globals/mixins
+include ../social-icons/social-icons
+include ../menu/menu
+
+
+mixin b-header(menuList, languagesList, socialList, classes)
+	+b.header(class=classes)
+		+e.container
+			+e.menu-burger
+				+e('svg').menu-icon.open(id="menu-icon")
+					use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#menu'))
+				+e('span').menu-text Меню
+			+e.logo
+				+e('a').link(href="index.html")
+					+e('img').logo-left-b(src='assets/i/logo-left-black.png')
+				+e('a').link(href="index.html")
+					+e('img').logo-left-w(src='assets/i/logo-left-white.png')
+				+e('a').link(href="index.html")
+					+e('img').logo-right-b(src='assets/i/logo-right-black.png')
+				+e('a').link(href="index.html")
+					+e('img').logo-right-w(src='assets/i/logo-right-white.png')
+			+e.icons
+				+b-social-icons(socialList)
+		+e.burger(id='burger')
+			+e.languages
+				+e('ul').list
+					each lang in languagesList
+						+e('li').item
+							+e('a').link(class= lang.class, href= lang.ref)= lang.text
+			+e.menu
+				+b-menu(menuList)
+			+e('p').email eqlagency@gmail.com
+			+e('p').phone +38 050 571 69 06
+			+e.icons
+				+b-social-icons(socialList)
