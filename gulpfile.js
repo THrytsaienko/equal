@@ -101,9 +101,3 @@ gulp.task('build', gulp.parallel('html', 'sass', 'yaml', 'js', 'scripts', 'copy'
 gulp.task('start', gulp.parallel('watch', 'serve'));
 
 gulp.task('default', gulp.series('clean', 'build', 'start'));
-
-
-
-
-
-
