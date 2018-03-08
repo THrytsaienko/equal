@@ -3,3 +3,35 @@
 // $phone, $tablet-port, $tablet-land, $desktopXS, $desktopMD, $desktopXL
 
 .footer
+	background-color: #000
+	&__container
+		width: 100%
+		max-width: 1200px
+		margin: 0 auto
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__image
+		padding-top: 22px
+		padding-bottom: 18px
+		padding-right: 165px
+	&__menu
+		.menu
+			&__item
+				display: inline
+			&__link
+				color: #dcdcdc
+				padding-right: 33px
+	&__email,
+	&__phone
+		padding-right: 40px
+		color: #dcdcdc
+	&__email
+		padding-left: 140px
+	&__social-icons
+		.icons
+		.icon
+			fill: #dcdcdc
+			margin-right: 20px
+		.icon_cross
+			display: none
