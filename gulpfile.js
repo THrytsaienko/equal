@@ -20,8 +20,8 @@ const ignorePug = [
 ];
 
 gulp.task('scripts', function() {
-  return gulp.src('src/assets/libs/**/*.js')
-    .pipe(concat('scripts.js'))
+  return gulp.src('src/blocks/**/*.js')
+    .pipe(concat('all.js'))
     .pipe(gulp.dest('build/assets'));
 });
 
@@ -51,7 +51,7 @@ gulp.task('html', function(){
 });
 
 gulp.task('js', function () {
-	return gulp.src('src/blocks/**/*.js')
+	return gulp.src('src/**/**/*.js')
 		.pipe(concat('main.js'))
 		.pipe(gulp.dest('build/assets'));
 });
@@ -83,6 +83,7 @@ gulp.task('watch', function() {
 	gulp.watch('src/**/*.pug', gulp.series('html', reload));
 	gulp.watch('src/**/*.sass', gulp.series('sass'));
 	gulp.watch('src/**/*.js', gulp.series('js', reload));
+	gulp.watch('src/**/*.js', gulp.series('scripts', reload));
 });
 
 gulp.task('copy', function(){
@@ -101,3 +102,9 @@ gulp.task('build', gulp.parallel('html', 'sass', 'yaml', 'js', 'scripts', 'copy'
 gulp.task('start', gulp.parallel('watch', 'serve'));
 
 gulp.task('default', gulp.series('clean', 'build', 'start'));
+
+
+
+
+
+
