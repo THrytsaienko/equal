@@ -20,8 +20,8 @@ const ignorePug = [
 ];
 
 gulp.task('scripts', function() {
-  return gulp.src('src/assets/libs/**/*.js')
-    .pipe(concat('scripts.js'))
+  return gulp.src('src/blocks/**/*.js')
+    .pipe(concat('all.js'))
     .pipe(gulp.dest('build/assets'));
 });
 
@@ -51,7 +51,7 @@ gulp.task('html', function(){
 });
 
 gulp.task('js', function () {
-	return gulp.src('src/blocks/**/*.js')
+	return gulp.src('src/**/**/*.js')
 		.pipe(concat('main.js'))
 		.pipe(gulp.dest('build/assets'));
 });
