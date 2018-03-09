@@ -1,2 +1,12 @@
-mixin b-footer()
+mixin b-footer(menuList)
 	+b.footer
+		+e.container
+			+e.logo
+				+e('a').link(href="index.html")
+					+e('img').image(src='assets/i/equal-agency.png')
+			+e.menu
+				+b-menu(menuList)
+			+e('p').email eqlagency@gmail.com
+			+e('p').phone +38 050 571 69 06
+			+e.social-icons
+				+b-social-icons(socialList)
