@@ -29,3 +29,4 @@ $('#menu-icon').click(function () {
     } else {
         tl.reverse();
     }
+});
