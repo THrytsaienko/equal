@@ -1,9 +1,0 @@
-include ../../globals/data
-include ../../globals/mixins
-
-mixin b-menu(menuList)
-	+b.menu
-		+e('ul').list
-			each it in menuList
-				+e('li').item
-					+e('a').link(href= it.href, class= it.class)= it.text

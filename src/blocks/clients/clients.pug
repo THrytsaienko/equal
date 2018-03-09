@@ -1,9 +1,0 @@
-mixin b-clients(data)
-	+b.clients
-		+e.header
-			+e('h4').current= data.current
-			+e('h2').title= data.title
-		+e.collection
-			each client in data.сlients
-				+e.link(href=client.href)
-					+e.logo(src=asset(client.img))

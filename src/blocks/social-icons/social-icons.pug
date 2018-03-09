@@ -1,9 +1,0 @@
-include ../../globals/data
-include ../../globals/mixins
-
-mixin b-social-icons(socialList)
-	+b.icons
-		each item in socialList
-			+e('a').link(href= item.href)
-				svg(class= item.class)
-					use(xlink:href=asset(item.svg))
