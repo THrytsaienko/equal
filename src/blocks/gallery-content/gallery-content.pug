@@ -3,5 +3,15 @@ include ../../globals/mixins
 include ../social-icons/social-icons
 
 
-mixin b-gallery-content()
-	+b.gallery-content()
+mixin b-gallery-content(UMFData, imagesList)
+	+b.gallery-content
+		+e.container
+			+e.text
+				+e('h1').title= UMFData.title
+				each item in UMFData.paragraphs
+					+e('p').paragraph= item.paragraph
+				+e('p').date= UMFData.date
+				+b-social-icons(socialList)
+			+e.images
+				each item in imagesList
+					+e('img').image(class= item.className, src=asset(item.img))
