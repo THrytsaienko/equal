@@ -19,17 +19,11 @@ const ignorePug = [
 	'!src/globals/**'
 ];
 
-gulp.task('scripts', function() {
-  return gulp.src('src/blocks/**/*.js')
-    .pipe(concat('all.js'))
-    .pipe(gulp.dest('build/assets'));
-});
-
 gulp.task('yaml', function(){
 	return gulp.src('src/**/*.yml')
 		.pipe(yaml())
 		.pipe(gulp.dest('build/assets'))
-})
+});
 
 // Basic configuration example
 var config = {
@@ -41,7 +35,7 @@ var config = {
 gulp.task('sprites', function () {
 	return gulp.src('src/assets/svg/*.svg')
 		.pipe(svgSprite(config))
-		.pipe(gulp.dest('build/assets/svg'));
+		.pipe(gulp.dest('build/assets/svg'))
 });
 
 gulp.task('html', function(){
@@ -53,25 +47,24 @@ gulp.task('html', function(){
 gulp.task('js', function () {
 	return gulp.src('src/**/**/*.js')
 		.pipe(concat('main.js'))
-		.pipe(gulp.dest('build/assets'));
+		.pipe(gulp.dest('build/assets'))
 });
 
 gulp.task('sass', function () {
 	return gulp.src('src/assets/**/*.sass')
-	    .pipe(sass())
+		.pipe(sass())
 		.pipe(postcss(processors))
 		.pipe(gcmq())
-	    .pipe(gulp.dest('build/assets'))
+		.pipe(gulp.dest('build/assets'))
 		.pipe(browserSync.stream())
 });
 
-
 gulp.task('serve', function() {
-    browserSync.init({
-        server: {
-            baseDir: "./build"
-        }
-    });
+	browserSync.init({
+		server: {
+			baseDir: "./build"
+		}
+	});
 });
 
 var reload = function(done){
@@ -96,14 +89,8 @@ gulp.task('clean', function() {
 	return del('build');
 });
 
-gulp.task('build', gulp.parallel('html', 'sass', 'yaml', 'js', 'scripts', 'copy'));
+gulp.task('build', gulp.parallel('html', 'sass', 'sprites', 'yaml', 'js', 'copy'));
 
 gulp.task('start', gulp.parallel('watch', 'serve'));
 
 gulp.task('default', gulp.series('clean', 'build', 'start'));
-
-
-
-
-
-
