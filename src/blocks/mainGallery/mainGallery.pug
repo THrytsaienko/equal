@@ -1,0 +1,13 @@
+mixin b-mainGallery(data)
+	+b.main-gallery
+		+e.header
+			+e("h4").counter= data.current 
+			+e("h1").title= data.title 
+			+e("p").description= data.description 
+			+e("p").total= data.total  
+		+e.collection.grid
+			each picture in data.pictures 
+				+e("a").link(href="#")
+					//- +e.pic.grid-item(class=picture.class) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque ab, dignissimos facilis deserunt error incidunt fugiat accusamus fuga nisi perspiciatis.
+					+e("img").picture.grid-item(class=picture.class src=asset(picture.img))
+		+e.btn= data.btn

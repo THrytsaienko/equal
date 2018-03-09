@@ -6,6 +6,7 @@ var browserSync = require('browser-sync').create();
 var del = require('del');
 var sass = require('gulp-sass');
 var gcmq = require('gulp-group-css-media-queries');
+var svgSprite = require('gulp-svg-sprite');
 var processors = [
 	autoprefixer({browsers: ['last 2 version']})
 ];
@@ -19,8 +20,8 @@ const ignorePug = [
 ];
 
 gulp.task('scripts', function() {
-  return gulp.src('src/blocks/**/*.js')
-    .pipe(concat('all.js'))
+  return gulp.src('src/assets/libs/**/*.js')
+    .pipe(concat('scripts.js'))
     .pipe(gulp.dest('build/assets'));
 });
 
@@ -30,16 +31,29 @@ gulp.task('yaml', function(){
 		.pipe(gulp.dest('build/assets'))
 })
 
+// Basic configuration example
+var config = {
+	mode: {
+		symbol: true // Activate the «symbol» mode
+	}
+};
+
+gulp.task('sprites', function () {
+	return gulp.src('src/assets/svg/*.svg')
+		.pipe(svgSprite(config))
+		.pipe(gulp.dest('build/assets/svg'));
+});
+
 gulp.task('html', function(){
 	return gulp.src(['src/**/*.pug', ...ignorePug])
 		.pipe(pug())
 		.pipe(gulp.dest('build'))
 });
 
-
-gulp.task('js', function(){
-	return gulp.src('src/assets/*.js')
-		.pipe(gulp.dest('build/assets'))
+gulp.task('js', function () {
+	return gulp.src('src/blocks/**/*.js')
+		.pipe(concat('main.js'))
+		.pipe(gulp.dest('build/assets'));
 });
 
 gulp.task('sass', function () {
@@ -69,11 +83,12 @@ gulp.task('watch', function() {
 	gulp.watch('src/**/*.pug', gulp.series('html', reload));
 	gulp.watch('src/**/*.sass', gulp.series('sass'));
 	gulp.watch('src/**/*.js', gulp.series('js', reload));
+	gulp.watch('src/**/*.js', gulp.series('scripts', reload));
 });
 
 gulp.task('copy', function(){
 	return gulp.src([
-			'src/assets/**/*.{jpg,png,jpeg,svg,gif}'
+			'src/assets/**/*.{jpg,png,jpeg,gif}'
 		])
 	.pipe(gulp.dest('build/assets'))
 });
@@ -83,6 +98,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('build', gulp.parallel('html', 'sass', 'yaml', 'js', 'scripts', 'copy'));
+
 gulp.task('start', gulp.parallel('watch', 'serve'));
 
 gulp.task('default', gulp.series('clean', 'build', 'start'));

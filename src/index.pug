@@ -1,10 +1,9 @@
 extends layouts/main
 
-append params
-	- pageTitle = "newPrj"
-
 block content
 	//- blocks go here
-	//- +b-header(data)
-	//- +b-footer(data)
 	+b-catalogue()
+	+b-header(menuList, languagesList, socialList)
+	+b-mainGallery(mainGallery)
+	+b-clients(clientsData)
+	+b-footer(menuList)
