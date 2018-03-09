@@ -12,6 +12,8 @@ var processors = [
 ];
 var yaml = require('gulp-yaml');
 var concat = require('gulp-concat');
+// var webpack = require('gulp-webpack');
+var webpack = require('webpack-stream');
 
 const ignorePug = [
 	'!src/layouts/**',
@@ -44,10 +46,10 @@ gulp.task('html', function(){
 		.pipe(gulp.dest('build'))
 });
 
-gulp.task('js', function () {
-	return gulp.src('src/**/**/*.js')
-		.pipe(concat('main.js'))
-		.pipe(gulp.dest('build/assets'))
+gulp.task('vendor:js', function () {
+    return gulp.src('src/assets/libs/*.js')
+        .pipe(concat('vendor.js'))
+        .pipe(gulp.dest('build/assets'));
 });
 
 gulp.task('sass', function () {
@@ -57,6 +59,13 @@ gulp.task('sass', function () {
 		.pipe(gcmq())
 		.pipe(gulp.dest('build/assets'))
 		.pipe(browserSync.stream())
+});
+
+gulp.task('webpack', function () {
+	return gulp.src('./src/assets/index.js')
+		.pipe(webpack(require('./webpack.config.js')))
+		.pipe(gulp.dest('./build/assets'))
+		.pipe(browserSync.stream());
 });
 
 gulp.task('serve', function() {
@@ -75,7 +84,6 @@ var reload = function(done){
 gulp.task('watch', function() {
 	gulp.watch('src/**/*.pug', gulp.series('html', reload));
 	gulp.watch('src/**/*.sass', gulp.series('sass'));
-	gulp.watch('src/**/*.js', gulp.series('js', reload));
 });
 
 gulp.task('copy', function(){
@@ -89,8 +97,8 @@ gulp.task('clean', function() {
 	return del('build');
 });
 
-gulp.task('build', gulp.parallel('html', 'sass', 'sprites', 'yaml', 'js', 'copy'));
+gulp.task('build', gulp.parallel('html', 'sass', 'sprites', 'yaml', 'copy', 'vendor:js'));
 
-gulp.task('start', gulp.parallel('watch', 'serve'));
+gulp.task('start', gulp.parallel('webpack', 'watch', 'serve'));
 
 gulp.task('default', gulp.series('clean', 'build', 'start'));
