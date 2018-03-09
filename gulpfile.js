@@ -12,7 +12,6 @@ var processors = [
 ];
 var yaml = require('gulp-yaml');
 var concat = require('gulp-concat');
-// var webpack = require('gulp-webpack');
 var webpack = require('webpack-stream');
 
 const ignorePug = [
