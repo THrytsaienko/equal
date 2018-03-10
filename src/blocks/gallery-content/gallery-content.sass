@@ -4,23 +4,21 @@
 		max-width: 1200px
 		margin: 0 auto
 		display: flex
-		border-top: 1px solid #d2d0d0
-		border-bottom: 1px solid #d2d0d0
+		border-top: 1px solid $gray-border-gallery
+		border-bottom: 1px solid $gray-border-gallery
 	&__text
-		padding-top: 50px
-		padding-left: 20px
-		padding-right: 95px
-		flex-basis: 31%
+		padding-top: 40px
+		padding-right: 66px
+		flex-basis: 35%
 	&__images
-		padding-top: 50px
-		padding-right: 20px
+		margin-top: 25px
 		margin-bottom: 110px
-		flex-basis: 69%
+		flex-basis: 65%
 		display: grid
 		grid-template-rows: repeat(8, 18vw)
 		grid-template-columns: repeat(2, 1fr)
 		grid-gap: 25px
-		padding: 25px
+		padding: 25px 0 25px 25px
 	&__item
 		&-1
 			grid-row: 1 / span 2
@@ -53,18 +51,23 @@
 		font-weight: 400
 		padding-bottom: 35px
 		line-height: 44px
+		letter-spacing: 1px
 	&__paragraph
 		padding-bottom: 40px
 		line-height: 26px
+		color: $light-gray-gallery
+		letter-spacing: .5px
 	&__date
 		padding-top: 20px
 		margin-bottom: 45px
-		border-top: 1px solid #d2d0d0
-		font-weight: 600
+		border-top: 1px solid $gray-border-gallery
+		font-weight: 500
+		letter-spacing: .5px
 	.icons
 		margin-top: 45px
 		.icon
 			margin-left: 0
 			margin-right: 20px
+			fill: $dark-gray-gallery
 			&_cross
 				display: none

@@ -3,7 +3,7 @@ include ../../globals/mixins
 include ../social-icons/social-icons
 
 
-mixin b-gallery-content(UMFData, imagesList, sliderImages)
+mixin b-gallery-content(UMFData, imagesList)
 	+b.gallery-content
 		+e.container
 			+e.text
@@ -16,10 +16,3 @@ mixin b-gallery-content(UMFData, imagesList, sliderImages)
 				each item in imagesList
 					+e('figure').item(class= item.className)
 						+e('img').img(src=asset(item.img))
-		+e.container
-			+e.slider
-			each img in sliderImages
-				+e('img').img(src=asset(item.img))
-				+e('img').img(src=asset(item.img))
-				+e('img').img(src=asset(item.img))
-				+e('img').img(src=asset(item.img))
