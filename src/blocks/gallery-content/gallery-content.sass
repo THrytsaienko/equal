@@ -14,10 +14,57 @@
 	&__images
 		padding-top: 50px
 		padding-right: 20px
-		padding-bottom: 135px
+		margin-bottom: 110px
 		flex-basis: 69%
-	&__image
+		display: grid
+		grid-template-rows: repeat(8, 18vw)
+		grid-template-columns: repeat(2, 1fr)
+		grid-gap: 25px
+		padding: 25px
+	&__item
+		&-1
+			grid-row: 1 / span 2
+			grid-column: 1 / -1
+		&-2
+			grid-row: 3 / span 2
+			grid-column: 1 / 2
+		&-3
+			grid-row: 3 / span 2
+			grid-column: 2 / 3
+		&-4
+			grid-row: 5 / span 2
+			grid-column: 1 / -1
+		&-5
+			grid-row: 7 / 8
+			grid-column: 1 / 2
+		&-6
+			grid-row: 8 / 9
+			grid-column: 1 / 2
+		&-7
+			grid-row: 7 / 9
+			grid-column: 2 / 3
+	&__img
 		width: 100%
-		
-		
-	
+		height: 100%
+		object-fit: cover
+		display: block
+	&__title
+		text-transform: uppercase
+		font-weight: 400
+		padding-bottom: 35px
+		line-height: 44px
+	&__paragraph
+		padding-bottom: 40px
+		line-height: 26px
+	&__date
+		padding-top: 20px
+		margin-bottom: 45px
+		border-top: 1px solid #d2d0d0
+		font-weight: 600
+	.icons
+		margin-top: 45px
+		.icon
+			margin-left: 0
+			margin-right: 20px
+			&_cross
+				display: none

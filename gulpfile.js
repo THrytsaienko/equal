@@ -53,7 +53,7 @@ gulp.task('vendor:js', function () {
 
 gulp.task('sass', function () {
 	return gulp.src('src/assets/**/*.sass')
-		.pipe(sass())
+		.pipe(sass.sync().on('error', sass.logError))
 		.pipe(postcss(processors))
 		.pipe(gcmq())
 		.pipe(gulp.dest('build/assets'))
