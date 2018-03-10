@@ -51,7 +51,7 @@ gulp.task('html', function(){
 });
 
 gulp.task('js', function () {
-	return gulp.src('src/**/**/*.js')
+	return gulp.src('src/assets/libs/*.js')
 		.pipe(concat('main.js'))
 		.pipe(gulp.dest('build/assets'));
 });
