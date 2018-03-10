@@ -28,5 +28,6 @@ $('#menu-icon').click(function () {
         tl.play();
     } else {
         tl.reverse();
-	}
+	      }
+    }
 });
