@@ -1,5 +1,35 @@
 @import '../../assets/s/variables'
 // breakpoints
 // $phone, $tablet-port, $tablet-land, $desktopXS, $desktopMD, $desktopXL
+$catalogue-width: 800px
+$sm-pic: $catalogue-width/3
+$gutter: 10px
+
 
 .catalogue
+	max-width: $catalogue-width
+	margin: 0px auto
+	.menu
+		margin: 10px 0px
+		&__list
+			text-align: center
+			text-transform: uppercase
+			padding: 10px
+		&__item
+		&__link
+			padding: 10px
+	&__collection
+		max-width: $catalogue-width
+		&:after
+			content: ''
+			display: block
+			clear: both
+	&__link
+	&__picture
+		border: $gutter solid white
+		&_sm
+			width: $sm-pic
+			height: $sm-pic
+		&_md
+			width: $sm-pic
+			height: $sm-pic*2

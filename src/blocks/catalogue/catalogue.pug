@@ -1,2 +1,170 @@
 mixin b-catalogue(data)
 	+b.catalogue
+		+b-menu(data.menu)
+		+e.collection.grid
+			each img in data.pics
+				+e('a').link(href="#")
+					+e('img').picture.grid-item(class=img.size alt=img.num src=asset(img.href))
+
+//- catalogue data
+-
+	var catData =
+	{
+		menu: 
+		[
+			{
+				class: "active",
+				href: "#",
+				text: "все"
+			},
+			{
+				class: "",
+				href: "#",
+				text: "море"
+			},
+			{
+				class: "",
+				href: "#",
+				text: "бизнес"
+			},
+			{
+				class: "",
+				href: "#",
+				text: "автомобили"
+			},
+			{
+				class: "",
+				href: "#",
+				text: "свадьба"
+			},
+			{
+				class: "",
+				href: "#",
+				text: "рестораны"
+			},
+
+		],
+		myMenu: ["все", "море", "бизнес", "автомобили", "свадьба", "рестораны"],
+		pics: 
+		[
+			{
+				num: "01",
+				href: "i/catalogue/pic_1.jpg",
+				area: "автомобили",
+				title: "volkswagen festival",
+				size: "catalogue__picture_sm"
+			},
+			{
+				num: "02",
+				href: "i/catalogue/pic_1.jpg",
+				area: "бизнес",
+				title: "ukrainian medical festival",
+				size: "catalogue__picture_sm"
+			},
+			{
+				num: "03",
+				href: "i/catalogue/pic_1.jpg",
+				area: "рестораны",
+				title: "beef мясо & вино restaurant",
+				size: "catalogue__picture_sm"
+			},
+			{
+				num: "04",
+				href: "i/catalogue/pic_1.jpg",
+				area: "свадьба",
+				title: "обручальный момент",
+				size: "catalogue__picture_sm"
+			},
+			{
+				num: "05",
+				href: "i/catalogue/pic_1.jpg",
+				area: "город",
+				title: "golden gate",
+				size: "catalogue__picture_md"
+			},
+			{
+				num: "06",
+				href: "i/catalogue/pic_1.jpg",
+				area: "автомобили",
+				title: "volkswagen festival",
+				size: "catalogue__picture_sm"
+			},
+			{
+				num: "07",
+				href: "i/catalogue/pic_1.jpg",
+				area: "автомобили",
+				title: "volkswagen festival",
+				size: "catalogue__picture_sm"
+			},
+			{
+				num: "08",
+				href: "i/catalogue/pic_1.jpg",
+				area: "бизнес",
+				title: "ребята и работа",
+				size: "catalogue__picture_sm"
+			},
+			{
+				num: "09",
+				href: "i/catalogue/pic_1.jpg",
+				area: "категория",
+				title: "пустынная пустыня",
+				size: "catalogue__picture_sm"
+			},
+			{
+				num: "10",
+				href: "i/catalogue/pic_1.jpg",
+				area: "города",
+				title: "budapest",
+				size: "catalogue__picture_sm"
+			},
+			{
+				num: "11",
+				href: "i/catalogue/pic_1.jpg",
+				area: "города",
+				title: "new york city",
+				size: "catalogue__picture_md"
+			},
+			{
+				num: "12",
+				href: "i/catalogue/pic_1.jpg",
+				area: "город",
+				title: "красный дом",
+				size: "catalogue__picture_md"
+			},
+			{
+				num: "13",
+				href: "i/catalogue/pic_1.jpg",
+				area: "архитектура",
+				title: "белый дворец",
+				size: "catalogue__picture_sm"
+			},
+			{
+				num: "14",
+				href: "i/catalogue/pic_1.jpg",
+				area: "бизнес",
+				title: "ноут, стол, стул",
+				size: "catalogue__picture_sm"
+			},
+			{
+				num: "15",
+				href: "i/catalogue/pic_1.jpg",
+				area: "автомобили",
+				title: "volkswagen festival",
+				size: "catalogue__picture_md"
+			},
+			{
+				num: "16",
+				href: "i/catalogue/pic_1.jpg",
+				area: "бизнес",
+				title: "ноги и туфли мужика",
+				size: "catalogue__picture_sm"
+			},
+			{
+				num: "17",
+				href: "i/catalogue/pic_1.jpg",
+				area: "море",
+				title: "набегающая волна",
+				size: "catalogue__picture_sm"
+			}
+		]
+	}
