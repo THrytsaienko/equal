@@ -3,9 +3,12 @@ mixin b-catalogue(data)
 		+b-menu(data.menu)
 		+e.collection.grid
 			each img in data.pics
-				+e('a').link(href="#")
-					+e('img').picture.grid-item(class=img.size alt=img.num src=asset(img.href))
-
+				+e.link(href="#")
+					+e('img').picture.grid-item(class=img.size alt="picture_" + img.num src=asset(img.href))
+					+e('div').text
+						h6 #{img.area}
+						h3 #{img.title}
+						|_____
 //- catalogue data
 -
 	var catData =
@@ -106,15 +109,15 @@ mixin b-catalogue(data)
 			{
 				num: "09",
 				href: "i/catalogue/pic_1.jpg",
-				area: "категория",
-				title: "пустынная пустыня",
+				area: "города",
+				title: "budapest",
 				size: "catalogue__picture_sm"
 			},
 			{
 				num: "10",
 				href: "i/catalogue/pic_1.jpg",
-				area: "города",
-				title: "budapest",
+				area: "категория",
+				title: "пустынная пустыня",
 				size: "catalogue__picture_sm"
 			},
 			{
@@ -127,15 +130,15 @@ mixin b-catalogue(data)
 			{
 				num: "12",
 				href: "i/catalogue/pic_1.jpg",
-				area: "город",
-				title: "красный дом",
+				area: "архитектура",
+				title: "белый дворец",
 				size: "catalogue__picture_md"
 			},
 			{
 				num: "13",
 				href: "i/catalogue/pic_1.jpg",
-				area: "архитектура",
-				title: "белый дворец",
+				area: "город",
+				title: "красный дом",
 				size: "catalogue__picture_sm"
 			},
 			{

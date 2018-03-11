@@ -15,7 +15,6 @@ $gutter: 10px
 			text-align: center
 			text-transform: uppercase
 			padding: 10px
-		&__item
 		&__link
 			padding: 10px
 	&__collection
@@ -25,6 +24,7 @@ $gutter: 10px
 			display: block
 			clear: both
 	&__link
+		text-align: center
 	&__picture
 		border: $gutter solid white
 		&_sm
@@ -33,3 +33,16 @@ $gutter: 10px
 		&_md
 			width: $sm-pic
 			height: $sm-pic*2
+	&__text
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		color: white
+		text-transform: uppercase
+		h6
+			padding: 10px
+			font-weight: 100
+		h3
+			width: $sm-pic - 65px
+			font-weight: 100
