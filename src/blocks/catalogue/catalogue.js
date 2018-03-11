@@ -1,39 +1,21 @@
+// =============== catalogue script ===============
 $(document).ready(function(){
-	console.log("catalogue msg");
-	// use filters in isotope
-	$("#all").click(function(){
-		$grid.isotope({ filter: '*' });
-		console.log("all");
-	});
-	
-	$("#sea").click(function(){
-		$grid.isotope({ filter: '.sea' });
-		console.log("sea");
-	});
+	// console.log("catalogue msg");
 
-	$("#cars").click(function(){
-		$grid.isotope({ filter: '.cars' });
-		console.log("cars");
-	});
+	// ========== use filters in isotope ==========
+	function filter(id){
+		let stuffToFilter = { filter: '.' + id};
 
-	$("#restaurants").click(function(){
-		$grid.isotope({ filter: '.restaurants' });
-		console.log("restaurants");
-	});
+		if (id == "all") {
+			$grid.isotope({ filter: '*' });
+		} else {
+			$grid.isotope(stuffToFilter);			
+		}
+	};
 
-	$("#business").click(function(){
-		$grid.isotope({ filter: '.business' });
-		console.log("business");
+	$(".menu__link").click(function(){
+		filter(this.id);		
 	});
-
-	$("#wedding").click(function(){
-		$grid.isotope({ filter: '.wedding' });
-		console.log("wedding");
-	});
-
-	$("#cities").click(function(){
-		$grid.isotope({ filter: '.cities' });
-		console.log("cities");
-	});
+	// ========== use filters in isotope ==========
 
 })
