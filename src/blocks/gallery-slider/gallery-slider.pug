@@ -1,0 +1,9 @@
+include ../../globals/data
+include ../../globals/mixins
+
+mixin b-gallery-slider()
+	+b.gallery-slider
+		+e.container
+			+e.slider
+			each item in sliderImages
+				+e('img').img(src=asset(item.img))
