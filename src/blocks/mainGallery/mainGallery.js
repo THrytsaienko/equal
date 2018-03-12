@@ -1,13 +1,15 @@
-// init Isotope
-var $grid = $('.grid').isotope({
-  // options...
-  layoutMode: 'packery',
-  // percentPosition: true,
-  packery: {
-  }
-});
+// =============== b-mainGallery script ===============
+$(document).ready(function(){
 
-// layout Isotope after each image loads
-$grid.imagesLoaded().progress( function() {
-  $grid.isotope('layout');
+	var $grid = $('.grid').isotope({
+	  layoutMode: 'packery',
+	  packery: {
+	  }
+	});
+
+	$grid.imagesLoaded().progress( function() {
+	  $grid.isotope('layout');
+	});
+
 });
+// =============== b-mainGallery script ===============
