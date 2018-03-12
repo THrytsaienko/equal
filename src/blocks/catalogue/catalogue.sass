@@ -1,0 +1,48 @@
+@import '../../assets/s/variables'
+// breakpoints
+// $phone, $tablet-port, $tablet-land, $desktopXS, $desktopMD, $desktopXL
+$catalogue-width: 800px
+$sm-pic: $catalogue-width/3
+$gutter: 10px
+
+
+.catalogue
+	max-width: $catalogue-width
+	margin: 0px auto
+	.menu
+		margin: 10px 0px
+		&__list
+			text-align: center
+			text-transform: uppercase
+			padding: 10px
+		&__link
+			padding: 10px
+	&__collection
+		max-width: $catalogue-width
+		&:after
+			content: ''
+			display: block
+			clear: both
+	&__link
+		text-align: center
+	&__picture
+		border: $gutter solid white
+		&_sm
+			width: $sm-pic
+			height: $sm-pic
+		&_md
+			width: $sm-pic
+			height: $sm-pic*2
+	&__text
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		color: #eff2f4
+		text-transform: uppercase
+		h6
+			padding: 10px
+			font-weight: 100
+		h3
+			width: $sm-pic - 65px
+			font-weight: 100

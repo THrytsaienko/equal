@@ -6,4 +6,4 @@ mixin b-menu(menuList)
 		+e('ul').list
 			each it in menuList
 				+e('li').item
-					+e('a').link(href= it.href, class= it.class)= it.text
+					+e('a').link(id= it.id href= it.href, class= it.class)= it.text

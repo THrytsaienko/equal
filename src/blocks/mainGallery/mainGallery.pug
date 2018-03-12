@@ -10,4 +10,10 @@ mixin b-mainGallery(data)
 				+e("a").link(href="#")
 					//- +e.pic.grid-item(class=picture.class) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque ab, dignissimos facilis deserunt error incidunt fugiat accusamus fuga nisi perspiciatis.
 					+e("img").picture.grid-item(class=picture.class src=asset(picture.img))
+					if picture.text
+						+e('div').text
+							h6 #{picture.text.area}
+							h3 #{picture.text.title}
+							p #{picture.text.description}
+							|_____
 		+e.btn= data.btn
