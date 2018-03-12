@@ -1,4 +1,4 @@
-// =============== catalogue script ===============
+// =============== b-catalogue script ===============
 $(document).ready(function(){
 	// console.log("catalogue msg");
 
@@ -19,3 +19,4 @@ $(document).ready(function(){
 	// ========== use filters in isotope ==========
 
 })
+// =============== b-catalogue script ===============
