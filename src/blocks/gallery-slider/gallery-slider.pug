@@ -1,9 +1,20 @@
 include ../../globals/data
 include ../../globals/mixins
 
-mixin b-gallery-slider()
+mixin b-gallery-slider(gallerySlider)
 	+b.gallery-slider
 		+e.container
 			+e.slider
-			each item in sliderImages
-				+e('img').img(src=asset(item.img))
+				each item in gallerySlider
+					+e.slide(class= item.className)
+						+e.info
+							+e('p').category= item.category
+							+e('h2').text= item.text
+		+e.container
+			+e.data
+				+e.albums 24 Альбома
+				+e.arrows
+					+e('svg').arrow-left(id="arrow-left")
+						use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#chevron-thin-left'))
+					+e('svg').arrow-right(id="arrow-right")
+						use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#chevron-thin-right'))
