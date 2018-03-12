@@ -14,6 +14,7 @@ $gutter: 10px
 	&__header
 		margin: 0px $gutter 50px $gutter
 		display: flex
+		color: #000000
 	&__collection
 		max-width: $gallery-width
 		&:after
@@ -36,6 +37,8 @@ $gutter: 10px
 		text-align: right		
 		@media #{$phone}, #{$tablet-port} 
 			display: none
+	&__link
+		text-align: center
 	&__picture
 		border: $gutter solid white
 		&_xs
@@ -50,6 +53,21 @@ $gutter: 10px
 		&_lg
 			width: $xs-pic*6
 			height: $xs-pic*6
+	&__text
+		position: absolute
+		width: 100%
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		color: #eff2f4
+		text-transform: uppercase
+		h3,h6,p
+			font-weight: 100
+		h3
+			padding: 5px
+		p
+			text-transform: none
+		
 	&__btn
 		text-align: center
 		padding: 10px 5px
