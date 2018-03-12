@@ -1,0 +1,11 @@
+mixin b-catalogue(menuList, pics)
+	+b.catalogue
+		+b-menu(menuList)
+		+e.collection.grid
+			each img in pics
+				+e.link(href="#" class=img.isotopeClass)
+					+e('img').picture.grid-item(class=img.size alt="picture_" + img.num src=asset(img.href))
+					+e('div').text
+						h6 #{img.area}
+						h3 #{img.title}
+						|_____
