@@ -45,15 +45,21 @@ gulp.task('html', function(){
 		.pipe(gulp.dest('build'))
 });
 
-gulp.task('slick', function(){
-	return gulp.src(['src/assets/libs/slick/slick/slick.min.js', 'src/assets/libs/slick/slick/slick.css', 'src/assets/libs/slick/slick/slick-theme.css'])
-		.pipe(gulp.dest('build/assets/slick'))
-});
+// gulp.task('slick', function(){
+// 	return gulp.src(['src/assets/libs/slick/slick/slick.min.js', 'src/assets/libs/slick/slick/slick.css', 'src/assets/libs/slick/slick/slick-theme.css'])
+// 		.pipe(gulp.dest('build/assets/slick'))
+// });
 
 gulp.task('vendor:js', function () {
-    return gulp.src('src/assets/libs/*.js')
+    return gulp.src('src/assets/libs/**/*.js')
         .pipe(concat('vendor.js'))
         .pipe(gulp.dest('build/assets'));
+});
+
+gulp.task('vendor:css', function () {
+	return gulp.src('src/assets/libs/slick/*.css')
+		.pipe(concat('vendor.css'))
+		.pipe(gulp.dest('build/assets'));
 });
 
 gulp.task('sass', function () {
@@ -101,7 +107,7 @@ gulp.task('clean', function() {
 	return del('build');
 });
 
-gulp.task('build', gulp.parallel('html', 'sass', 'sprites', 'yaml', 'copy', 'vendor:js', 'slick'));
+gulp.task('build', gulp.parallel('html', 'sass', 'sprites', 'yaml', 'copy', 'vendor:js', 'vendor:css'));
 
 gulp.task('start', gulp.parallel('webpack', 'watch', 'serve'));
 

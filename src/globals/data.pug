@@ -57,6 +57,7 @@
 
 //- project's data goes here
 
+//- ==================== b-mainGallery ====================
 -
 	var mainGallery = 
 		{
@@ -67,94 +68,45 @@
 			pictures: 
 				[
 					{
-						img: "i/lobby.jpg", 
+						img: "i/main-gallery/lobby.jpg", 
 						class: "main-gallery__picture_lg",
 					},
 					{
-						img: "i/food_serve.jpg", 
+						img: "i/main-gallery/food_serve.jpg", 
 						class: "main-gallery__picture_xs",
 					},
 					{
-						img: "i/rest_supply.jpg", 
+						img: "i/main-gallery/rest_supply.jpg", 
 						class: "main-gallery__picture_xs",
 					},
 					{
-						img: "i/trip.jpg", 
+						img: "i/main-gallery/trip.jpg", 
 						class: "main-gallery__picture_sm",
+						text: 
+							{
+								area: "places",
+								title: "mediterranean sailing",
+								description: "Must visit holiday description"
+							}
 					},
 					{
-						img: "i/tesla.jpg", 
+						img: "i/main-gallery/tesla.jpg", 
 						class: "main-gallery__picture_md",
 					},
 					{
-						img: "i/wedding.jpg", 
+						img: "i/main-gallery/wedding.jpg", 
 						class: "main-gallery__picture_md",
 					},
 					{
-						img: "i/food_dish.jpg", 
+						img: "i/main-gallery/food_dish.jpg", 
 						class: "main-gallery__picture_md",
 					},
 				],
 			btn: "ВСІ РОБОТИ"
 		}
--
-	var menuList = [
-		{
-			class: 'active',
-			href: 'gallery.html',
-			text: 'Галерея'
-		},
-		{
-			class: '',
-			href: '#',
-			text: 'О нас'
-		},
-		{
-			class: '',
-			href: '#',
-			text: 'Блог'
-		}
-	];
+//- ==================== b-mainGallery ====================
 
--
-	var languagesList = [
-		{
-			class: 'active',
-			ref: '#',
-			text: 'ру'
-		},
-		{
-			class: '',
-			ref: '#',
-			text: 'ук'
-		},
-		{
-			class: '',
-			ref: '#',
-			text: 'en'
-		}
-	];
-
--
-	var socialList = [
-		{
-			class: 'icon icon_facebook',
-			href: '#',
-			svg: 'svg/symbol/svg/sprite.symbol.svg#facebook'
-		},
-		{
-			class: 'icon icon_instagram',
-			href: '#',
-			svg: 'svg/symbol/svg/sprite.symbol.svg#instagram'
-		},
-		{
-			class: 'icon icon_cross',
-			href: '#',
-			svg: 'svg/symbol/svg/sprite.symbol.svg#cross'
-		}
-	];
-
-//- project's data goes here
+//- ==================== b-clients ====================
 -
 	var clientsData = 
 		{
@@ -251,6 +203,9 @@
 		date: "8.13.2017"
 	}
 
+//- ==================== b-clients ====================
+
+//- ==================== b-catalogue ====================
 -
 	var gallerySlider = [
 		{
@@ -302,3 +257,190 @@
 			text: "Budapest"
 		}
 	]
+	var catMenu =
+		[
+			{
+				id: "all",
+				class: "active",
+				href: "#",
+				text: "все"
+			},
+			{
+				id: "sea",
+				class: "",
+				href: "#",
+				text: "море"
+			},
+			{
+				id: "business",
+				class: "",
+				href: "#",
+				text: "бизнес"
+			},
+			{
+				id: "cars",
+				class: "",
+				href: "#",
+				text: "автомобили"
+			},
+			{
+				id: "wedding",
+				class: "",
+				href: "#",
+				text: "свадьба"
+			},
+			{
+				id: "restaurants",
+				class: "",
+				href: "#",
+				text: "рестораны"
+			},
+			{
+				id: "cities",
+				class: "",
+				href: "#",
+				text: "города"
+			}
+		];
+
+-
+	var catPics =
+		[
+			{
+				isotopeClass: "cars", 
+				num: "01",
+				href: "i/catalogue/vw_1.jpg",
+				area: "автомобили",
+				title: "volkswagen festival",
+				size: "catalogue__picture_sm"
+			},
+			{
+				isotopeClass: "business", 
+				num: "02",
+				href: "i/catalogue/umf.jpg",
+				area: "бизнес",
+				title: "ukrainian medical festival",
+				size: "catalogue__picture_sm"
+			},
+			{
+				isotopeClass: "restaurants", 
+				num: "03",
+				href: "i/catalogue/beef_wine.jpg",
+				area: "рестораны",
+				title: "beef мясо & вино restaurant",
+				size: "catalogue__picture_sm"
+			},
+			{
+				isotopeClass: "wedding", 
+				num: "04",
+				href: "i/catalogue/engagement.jpg",
+				area: "свадьба",
+				title: "обручальный момент",
+				size: "catalogue__picture_sm"
+			},
+			{
+				isotopeClass: "cities", 
+				num: "05",
+				href: "i/catalogue/golden_gate_br.jpg",
+				area: "город",
+				title: "golden gate",
+				size: "catalogue__picture_md"
+			},
+			{
+				isotopeClass: "cars", 
+				num: "06",
+				href: "i/catalogue/vw_2.jpg",
+				area: "автомобили",
+				title: "volkswagen festival",
+				size: "catalogue__picture_sm"
+			},
+			{
+				isotopeClass: "cars", 
+				num: "07",
+				href: "i/catalogue/vw_3.jpg",
+				area: "автомобили",
+				title: "volkswagen festival",
+				size: "catalogue__picture_sm"
+			},
+			{
+				isotopeClass: "business", 
+				num: "08",
+				href: "i/catalogue/guys_work.jpg",
+				area: "бизнес",
+				title: "ребята и работа",
+				size: "catalogue__picture_sm"
+			},
+			{
+				isotopeClass: "cities", 
+				num: "09",
+				href: "i/catalogue/budapest.jpg",
+				area: "города",
+				title: "budapest",
+				size: "catalogue__picture_sm"
+			},
+			{
+				isotopeClass: "", 
+				num: "10",
+				href: "i/catalogue/desert.jpg",
+				area: "категория",
+				title: "пустынная пустыня",
+				size: "catalogue__picture_sm"
+			},
+			{
+				isotopeClass: "cities", 
+				num: "11",
+				href: "i/catalogue/nyc.jpg",
+				area: "города",
+				title: "new york city",
+				size: "catalogue__picture_md"
+			},
+			{
+				isotopeClass: "", 
+				num: "12",
+				href: "i/catalogue/white_palace.jpg",
+				area: "архитектура",
+				title: "белый дворец",
+				size: "catalogue__picture_md"
+			},
+			{
+				isotopeClass: "cities", 
+				num: "13",
+				href: "i/catalogue/brick_house.jpg",
+				area: "город",
+				title: "красный дом",
+				size: "catalogue__picture_sm"
+			},
+			{
+				isotopeClass: "business", 
+				num: "14",
+				href: "i/catalogue/laptop_desk.jpg",
+				area: "бизнес",
+				title: "ноут, стол, стул",
+				size: "catalogue__picture_sm"
+			},
+			{
+				isotopeClass: "cars", 
+				num: "15",
+				href: "i/catalogue/vw_4_p.jpg",
+				area: "автомобили",
+				title: "volkswagen festival",
+				size: "catalogue__picture_md"
+			},
+			{
+				isotopeClass: "business", 
+				num: "16",
+				href: "i/catalogue/shoes_foot.jpeg",
+				area: "бизнес",
+				title: "ноги и туфли мужика",
+				size: "catalogue__picture_sm"
+			},
+			{
+				isotopeClass: "sea", 
+				num: "17",
+				href: "i/catalogue/wave.jpg",
+				area: "море",
+				title: "набегающая волна",
+				size: "catalogue__picture_sm"
+			}
+		]
+//- ==================== b-catalogue ====================
