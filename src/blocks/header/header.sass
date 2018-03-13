@@ -36,9 +36,9 @@
 			padding-top: 30px
 			visibility: hidden
 		.icon
-				fill: #000
+			fill: #000
 		.icon_cross
-				display: none
+			display: none
 	&__burger
 		position: absolute
 		top: 55px
@@ -46,7 +46,7 @@
 		background-color: #fff
 		padding-left: 177px
 		width: 490px
-		height: 530px
+		height: 480px
 		z-index: 10
 	&__languages
 	&__item
@@ -54,7 +54,7 @@
 		padding-top: 45px
 		margin-right: 18px
 		margin-bottom: 80px
-	&__link
+	&__link-lang
 		color: gray
 		text-decoration: none
 		&.active
@@ -70,7 +70,7 @@
 			visibility: visible
 			margin-top: 30px
 		.icon
-			color: #000
+			color: #fff
 			margin-left: 0px
 			margin-right: 20px
 		.icon_facebook,
@@ -126,6 +126,9 @@
 				display: inline
 		&__burger
 			display: none
+		&__burger .header__icons
+			.icon
+				fill: #000
 
 .header_white
 	position: relative
@@ -164,8 +167,11 @@
 				visibility: visible
 				padding-top: 30px
 			.icon
-				fill: #000
+				fill: #fff
 			.icon_cross
 				display: none
 		&__burger
 			display: none
+		&__burger .header__icons
+			.icon
+				fill: #000

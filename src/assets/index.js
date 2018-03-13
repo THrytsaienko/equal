@@ -5,3 +5,5 @@ import '../blocks/gallery-content/gallery-content';
 import '../blocks/mainGallery/mainGallery';
 import '../blocks/catalogue/catalogue';
 import '../blocks/menu/menu';
+import '../blocks/header/header';
+import '../blocks/footer/footer';
