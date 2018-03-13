@@ -45,15 +45,15 @@ gulp.task('html', function(){
 		.pipe(gulp.dest('build'))
 });
 
-gulp.task('js', function () {
-	return gulp.src('src/assets/libs/*.js')
-		.pipe(concat('main.js'))
-		.pipe(gulp.dest('build/assets'));
+gulp.task('vendor:js', function () {
+    return gulp.src('src/assets/libs/*.js')
+        .pipe(concat('vendor.js'))
+        .pipe(gulp.dest('build/assets'));
 });
 
 gulp.task('sass', function () {
 	return gulp.src('src/assets/**/*.sass')
-		.pipe(sass())
+		.pipe(sass.sync().on('error', sass.logError))
 		.pipe(postcss(processors))
 		.pipe(gcmq())
 		.pipe(gulp.dest('build/assets'))

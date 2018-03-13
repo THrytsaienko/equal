@@ -1,4 +1,6 @@
 extends layouts/main
 
 block content
-    //- +b-header(menuList, languagesList, socialList, '_white')
+	+b-header(menuList, languagesList, socialList, '_dark')
+	+b-gallery-content(UMFData, imagesList)
+	+b-footer(menuList)
