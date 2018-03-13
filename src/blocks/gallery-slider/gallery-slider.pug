@@ -7,9 +7,10 @@ mixin b-gallery-slider(gallerySlider)
 			+e.slider
 				each item in gallerySlider
 					+e.slide(class= item.className)
-						+e.info
-							+e('p').category= item.category
-							+e('h2').text= item.text
+						+e('a').link(href= item.href)
+							+e.info
+								+e('p').category= item.category
+								+e('h2').text= item.text
 		+e.container
 			+e.data
 				+e.albums 24 Альбома
