@@ -1,0 +1,103 @@
+.gallery-slider
+	&__container
+		width: 100%
+		max-width: 1200px
+		margin: 0 auto
+	&__slider
+		display: flex
+		justify-content: space-between
+		padding-top: 35px
+		padding-bottom: 35px
+	&__info
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		letter-spacing: 1px
+	&__category,
+	&__text
+		text-transform: uppercase
+		color: #fff
+		text-align: center
+		font-weight: 400
+	&__text
+		padding-top: 20px
+		padding-bottom: 20px
+		position: relative
+		&:after
+			content: ""
+			position: absolute
+			left: 50%
+			transform: translate(-50%)
+			bottom: 0
+			height: 1px
+			width: 35px
+			border-bottom: 2px solid #fff
+	&__slide
+		background-size: cover
+		background-position: center
+		width: 100%
+		height: 185px
+		position: relative
+		margin: 0 11px
+	.slide-1
+		background-image: linear-gradient(rgba(#000, .7), rgba(#000, .7)), url('./i/gallery-slider/1.jpg')
+	.slide-2
+		background-image: linear-gradient(rgba(#000, .7), rgba(#000, .7)), url('./i/gallery-slider/2.jpg')
+		// background-size: cover
+		// background-position: center
+		// width: 100%
+		// height: 185px
+		// position: relative
+	.slide-3
+		background-image: linear-gradient(rgba(#000, .7), rgba(#000, .7)), url('./i/gallery-slider/3.jpg')
+		// background-size: cover
+		// background-position: center
+		// width: 100%
+		// height: 185px
+	.slide-4
+		background-image: linear-gradient(rgba(#000, .7), rgba(#000, .7)), url('./i/gallery-slider/4.jpg')
+		// background-size: cover
+		// background-position: center
+		// width: 100%
+		// height: 185px
+	.slide-5
+		background-image: linear-gradient(rgba(#000, .7), rgba(#000, .7)), url('./i/gallery-slider/5.jpg')
+		// background-size: cover
+		// background-position: center
+		// width: 100%
+		// height: 185px
+	.slide-6
+		background-image: linear-gradient(rgba(#000, .7), rgba(#000, .7)), url('./i/gallery-slider/6.jpg')
+		// background-size: cover
+		// background-position: center
+		// width: 100%
+		// height: 185px
+	.slide-7
+		background-image: linear-gradient(rgba(#000, .7), rgba(#000, .7)), url('./i/gallery-slider/7.jpg')
+		// background-size: cover
+		// background-position: center
+		// width: 100%
+		// height: 185px
+	.slide-8
+		background-image: linear-gradient(rgba(#000, .7), rgba(#000, .7)), url('./i/gallery-slider/8.jpg')
+		// background-size: cover
+		// background-position: center
+		// width: 100%
+		// height: 185px
+	&__data
+		margin-bottom: 35px
+		display: flex
+		justify-content: space-between
+	&__albums
+		text-transform: uppercase
+		letter-spacing: 1px
+		color: $light-gray-gallery
+	&__arrow-left,
+	&__arrow-right
+		width: 15px
+		height: 15px
+		fill: #000
+		cursor: pointer
+	&__arrow-right
+		margin-left: 35px
