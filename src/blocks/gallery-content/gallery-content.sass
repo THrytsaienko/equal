@@ -1,15 +1,32 @@
 .gallery-content
 	&__container
 		width: 100%
-		max-width: 1200px
+		max-width: 1240px
 		margin: 0 auto
+		padding: 0 20px
 		display: flex
 		border-top: 1px solid $gray-border-gallery
 		border-bottom: 1px solid $gray-border-gallery
+		@media #{$tablet-port}
+			flex-direction: column
+		@media #{$phone}
+			flex-direction: column
 	&__text
 		padding-top: 40px
 		padding-right: 66px
 		flex-basis: 35%
+		@media #{$desktopXS}
+			padding-right: 50px
+			flex-basis: 40%
+		@media #{$tablet-land}
+			padding-right: 20px
+			flex-basis: 50%
+		@media #{$tablet-port}
+			flex-basis: 100%
+			padding-right: 0
+		@media #{$phone}
+			flex-basis: 100%
+			padding-right: 0
 	&__images
 		margin-top: 25px
 		margin-bottom: 110px
@@ -18,7 +35,23 @@
 		grid-template-rows: repeat(8, 18vw)
 		grid-template-columns: repeat(2, 1fr)
 		grid-gap: 25px
-		padding: 25px 0 25px 25px
+		@media #{$desktopXS}
+			flex-basis: 60%
+			margin-bottom: 80px
+		@media #{$tablet-land}
+			flex-basis: 50%
+			margin-bottom: 50px
+			grid-gap: 15px
+		@media #{$tablet-port}
+			flex-basis: 100%
+			grid-gap: 20px
+			margin-bottom: 60px
+			margin-top: 50px
+		@media #{$phone}
+			flex-basis: 100%
+			grid-gap: 15px
+			margin-bottom: 60px
+			margin-top: 40px
 	&__item
 		&-1
 			grid-row: 1 / span 2
@@ -52,19 +85,55 @@
 		padding-bottom: 35px
 		line-height: 44px
 		letter-spacing: 1px
+		@media #{$desktopXS}
+			padding-bottom: 30px
+			font-size: 28px
+		@media #{$tablet-land}
+			font-size: 24px
+			padding-bottom: 25px
+			line-height: 36px
+			letter-spacing: .5px
+		@media #{$tablet-port}
+			padding-bottom: 20px
+		@media #{$phone}
+			padding-bottom: 20px
+			font-size: 24px
+			line-height: 36px
+			letter-spacing: .5px
 	&__paragraph
-		padding-bottom: 40px
+		margin-bottom: 40px
 		line-height: 26px
 		color: $light-gray-gallery
 		letter-spacing: .5px
+		@media #{$desktopXS}
+			margin-bottom: 30px
+		@media #{$tablet-land}
+			margin-bottom: 30px
+			line-height: 24px
+		@media #{$tablet-port}
+			margin-bottom: 20px
+		@media #{$phone}
+			margin-bottom: 20px
 	&__date
 		padding-top: 20px
 		margin-bottom: 45px
 		border-top: 1px solid $gray-border-gallery
 		font-weight: 500
 		letter-spacing: .5px
+		@media #{$tablet-port}
+			border-top: none
+		@media #{$phone}
+			border-top: none
 	.icons
 		margin-top: 45px
+		@media #{$desktopXS}
+			margin-top: 35px
+		@media #{$tablet-land}
+			margin-top: 30px
+		@media #{$tablet-port}
+			margin-top: 30px
+		@media #{$phone}
+			margin-top: 30px
 		.icon
 			margin-left: 0
 			margin-right: 20px
