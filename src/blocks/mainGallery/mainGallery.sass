@@ -1,6 +1,4 @@
 @import '../../assets/s/variables'
-$gallery-width: 800px
-$xs-pic: $gallery-width/12
 $gutter: 10px
 
 *
@@ -9,14 +7,12 @@ $gutter: 10px
 // $phone, $tablet-port, $tablet-land, $desktopXS, $desktopMD, $desktopXL
 
 .main-gallery
-	max-width: $gallery-width
-	margin: 0px auto
+	// margin: 0px auto
 	&__header
 		margin: 0px $gutter 50px $gutter
 		display: flex
 		color: #000000
 	&__collection
-		max-width: $gallery-width
 		&:after
 			content: ''
 			display: block
@@ -41,18 +37,6 @@ $gutter: 10px
 		text-align: center
 	&__picture
 		border: $gutter solid white
-		&_xs
-			width: $xs-pic*3
-			height: $xs-pic*3
-		&_sm
-			width: $xs-pic*6
-			height: $xs-pic*3
-		&_md
-			width: $xs-pic*4
-			height: $xs-pic*5
-		&_lg
-			width: $xs-pic*6
-			height: $xs-pic*6
 	&__text
 		position: absolute
 		width: 100%
@@ -67,13 +51,12 @@ $gutter: 10px
 			padding: 5px
 		p
 			text-transform: none
-		
 	&__btn
 		text-align: center
 		padding: 10px 5px
 		max-width: 200px
 		background-color: black
 		color: white
-		margin: 0 auto
+		margin: 0 auto 10px auto
 		@media #{$phone}, #{$tablet-port}
 			max-width: 100%
