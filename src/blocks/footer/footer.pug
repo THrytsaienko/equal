@@ -6,7 +6,8 @@ mixin b-footer(menuList)
 					+e('img').image(src='assets/i/equal-agency.png')
 			+e.menu
 				+b-menu(menuList)
-			+e('p').email eqlagency@gmail.com
-			+e('p').phone +38 050 571 69 06
+			+e.contacts
+				+e('p').email eqlagency@gmail.com
+				+e('p').phone +38 050 571 69 06
 			+e.social-icons
 				+b-social-icons(socialList)
