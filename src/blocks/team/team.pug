@@ -1,0 +1,14 @@
+mixin b-team(data)
+	+b.team
+		+e.container
+			each item in data
+				//- +e.controls
+				//- 	+e('p').current=item.current
+				//- 	+e('p').arrows
+				//- 		+e('span').left=item.left
+				//- 		+e('span').right=item.right			
+				//- 	+e('p').number=item.number
+				+e.body
+					+e('h2').title= item.title
+					+e.description!= item.description
+				+e('img').image(src=item.image)
