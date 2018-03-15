@@ -1,8 +1,13 @@
 extends layouts/main
 
+append params	
+	- pageTitle = "Equal"
+	- activeMenuIndex = 99
+
+
 block content
 	//- blocks go here
-	+b-header(menuList, languagesList, socialList)
+	+b-header(menuList, languagesList, socialList, 99)
 	+b-mainGallery(mainGallery)
 	+b-clients(clientsData)
 	+b-footer(menuList)
