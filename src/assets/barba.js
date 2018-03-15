@@ -55,7 +55,7 @@ var FadeTransition = Barba.BaseTransition.extend({
 			visibility: 'visible',
 			opacity: 0
 		});
-
+		$(document).trigger("pageInit", $el);
 		$el.animate({
 			opacity: 1
 		}, 400, function () {
@@ -81,8 +81,3 @@ Barba.Pjax.getTransition = function () {
 
 	return FadeTransition;
 };
-
-$('ul > li').click(function () {
-	$('.active').removeClass('active');
-	$(this).addClass('active');
-});
