@@ -1,7 +1,6 @@
 @import '../../assets/s/variables'
 
-.mainSlider
-  margin-bottom: 80px
+.main-slider
   display: flex
   align-items: flex-start
   justify-content: space-between
@@ -10,7 +9,6 @@
     padding-top: 130px
     position: relative
     left: 20%
-
 
   &__tag
     text-transform: uppercase
@@ -26,7 +24,6 @@
     width: 300px
     margin-bottom: 8px
 
-
   &__description
     font-size: 13px
     line-height: 20px
@@ -34,7 +31,6 @@
 
   &__socials
     margin-top: 50px
-
 
   &__facebook
     margin-right: 12px
@@ -49,32 +45,20 @@
   position: relative
   width: 50.5%
 
-  &__button-prev
-    border: none
-    display: inline-block
-    width: 52px
-    height: 33px
-    color: #000
-    background-color: #fff
-    text-align: center
-    cursor: pointer
-    outline: 0
-    position: absolute
-    z-index: 666
-    bottom: 0
+.carousel-container__button-prev,
+.carousel-container__button-next
+  border: none
+  display: inline-block
+  width: 52px
+  height: 33px
+  color: #000
+  background-color: #fff
+  text-align: center
+  cursor: pointer
+  outline: 0
+  position: absolute
+  z-index: 10
+  bottom: 0
 
-  &__button-next
-    border: none
-    display: inline-block
-    width: 52px
-    height: 33px
-    vertical-align: middle
-    color: #000
-    background-color: #fff
-    text-align: center
-    cursor: pointer
-    outline: 0
-    position: absolute
-    z-index: 666
-    bottom: 0
-    left: 52px
+.carousel-container__button-next
+  left: 52px

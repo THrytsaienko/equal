@@ -1,5 +1,5 @@
 mixin b-mainSlider(data)
-  +b.mainSlider
+  +b.main-slider
     +e.info-container
       +e('img').logo(src= asset(data.logo))
       +e('p').tag= data.tag
@@ -13,8 +13,9 @@ mixin b-mainSlider(data)
     +b.carousel-container  
       +e('button').button-prev 〈 
       +e('button').button-next 〉  
-      +b.carousel 
+      +b.carousel
         each item in data.mainSliderImages
-          +e('img').img(src=asset(item.img))
+          +e
+            +e('img').img(src=asset(item.img))
       
     
