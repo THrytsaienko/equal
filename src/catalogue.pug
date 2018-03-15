@@ -1,6 +1,8 @@
 extends layouts/main
 
 block content
-    +b-header(menuList, languagesList, socialList, '_white')
-    +b-catalogue(catMenu, catPics)
-    +b-footer(menuList)
+	div(id="barba-wrapper")
+		div(class="barba-container")
+			+b-header(menuList, languagesList, socialList, '_white')
+			+b-catalogue(catMenu, catPics)
+	+b-footer(menuList)

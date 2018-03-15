@@ -1,7 +1,6 @@
 var tl = new TimelineMax({
 		paused: true,
 		onComplete: function () {
-			$('#burger').css("display", "block");
 			$('#menu-icon').html('<use xlink:href="/assets/svg/symbol/svg/sprite.symbol.svg#cross">');
 			$('#menu-icon').removeClass('open');
 		},
@@ -12,7 +11,7 @@ var tl = new TimelineMax({
 		}
 	});
 
-// tl.set({'display': 'block'});
+tl.set('#burger', {'display': 'block'});
 tl.fromTo('#burger', 1, {
 	autoAlpha: 0,
 	x: -1000
