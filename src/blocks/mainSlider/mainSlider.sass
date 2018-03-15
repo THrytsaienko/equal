@@ -4,16 +4,32 @@
   display: flex
   align-items: flex-start
   justify-content: space-between
+  @media #{$tablet-land}
+     flex-direction: column
+  @media #{$tablet-port}
+     flex-direction: column
+  @media #{$phone}
+      flex-direction: column
+
 
   &__info-container
     padding-top: 130px
     position: relative
-    left: 20%
+    left: 24%
+    @media #{$tablet-land}
+      width: 90%
+    @media #{$tablet-port}
+      // width: 100%
+    @media #{$phone}
+      // width: 100%
 
   &__tag
     text-transform: uppercase
     font-size: 10px
     margin-bottom: 8px
+    @media #{$tablet-land}
+      width: 100%
+      display: block
 
   &__headline
     display: block
@@ -23,11 +39,18 @@
     font-weight: 400
     width: 300px
     margin-bottom: 8px
+    @media #{$tablet-land}
+      width: 100%
+      text-align: center
+
 
   &__description
     font-size: 13px
     line-height: 20px
     width: 300px
+    // @media #{$tablet-land}
+    //   width: 100%
+    //   display: block
 
   &__socials
     margin-top: 50px
@@ -40,25 +63,11 @@
     left: -70px
     top: 157px
 
-
-.carousel-container
-  position: relative
-  width: 50.5%
-
-.carousel-container__button-prev,
-.carousel-container__button-next
-  border: none
-  display: inline-block
-  width: 52px
-  height: 33px
-  color: #000
-  background-color: #fff
-  text-align: center
-  cursor: pointer
-  outline: 0
-  position: absolute
-  z-index: 10
-  bottom: 0
-
-.carousel-container__button-next
-  left: 52px
+  &__carousel
+    width: 50.5%
+    @media #{$tablet-land}
+      width: 100%
+    @media #{$tablet-land}
+      width: 100%
+    @media #{$phone}
+      width: 100%

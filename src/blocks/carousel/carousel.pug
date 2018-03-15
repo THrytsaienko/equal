@@ -1,0 +1,11 @@
+mixin b-carousel(items)
+  +b.carousel
+    +e.controls 
+      +e('svg').button-prev(id="arrow-left")
+        use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#chevron-thin-left'))
+      +e('svg').button-next(id="arrow-right")
+        use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#chevron-thin-right'))
+      +e.slides
+        each item in items
+          +e.slide
+            +e('img').img(src=asset(item.img))
