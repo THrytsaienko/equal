@@ -1,0 +1,73 @@
+@import '../../assets/s/variables'
+
+.main-slider
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  @media #{$tablet-land}
+     flex-direction: column
+  @media #{$tablet-port}
+     flex-direction: column
+  @media #{$phone}
+      flex-direction: column
+
+
+  &__info-container
+    padding-top: 130px
+    position: relative
+    left: 24%
+    @media #{$tablet-land}
+      width: 90%
+    @media #{$tablet-port}
+      // width: 100%
+    @media #{$phone}
+      // width: 100%
+
+  &__tag
+    text-transform: uppercase
+    font-size: 10px
+    margin-bottom: 8px
+    @media #{$tablet-land}
+      width: 100%
+      display: block
+
+  &__headline
+    display: block
+    text-transform: uppercase
+    font-size: 31px
+    line-height: 40px
+    font-weight: 400
+    width: 300px
+    margin-bottom: 8px
+    @media #{$tablet-land}
+      width: 100%
+      text-align: center
+
+
+  &__description
+    font-size: 13px
+    line-height: 20px
+    width: 300px
+    // @media #{$tablet-land}
+    //   width: 100%
+    //   display: block
+
+  &__socials
+    margin-top: 50px
+
+  &__facebook
+    margin-right: 12px
+
+  &__logo
+    position: absolute
+    left: -70px
+    top: 157px
+
+  &__carousel
+    width: 50.5%
+    @media #{$tablet-land}
+      width: 100%
+    @media #{$tablet-land}
+      width: 100%
+    @media #{$phone}
+      width: 100%

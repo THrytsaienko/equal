@@ -7,3 +7,5 @@ import '../blocks/catalogue/catalogue';
 import '../blocks/menu/menu';
 import '../blocks/header/header';
 import '../blocks/footer/footer';
+import '../blocks/mainSlider/mainSlider';
+import '../blocks/carousel/carousel';
