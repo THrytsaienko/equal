@@ -8,11 +8,15 @@
 	background-color: transparent
 	&__container
 		width: 100%
-		max-width: 1200px
+		max-width: 1240px
 		margin: 0 auto
+		padding: 0 20px
 		display: flex
 		justify-content: space-between
 		align-items: flex-start
+		flex-wrap: wrap
+		@media #{$phone}
+			justify-content: space-around
 	&__menu-burger
 		padding-top: 27px
 	&__menu-icon
@@ -29,6 +33,12 @@
 		padding-top: 28px
 		padding-bottom: 60px
 		z-index: 100
+		@media #{$tablet-land}
+			padding-bottom: 50px
+		@media #{$tablet-port}
+			padding-bottom: 40px
+		@media #{$phone}
+			padding-bottom: 30px
 	&__logo-left-w,
 	&__logo-right-b
 		display: none
@@ -38,6 +48,9 @@
 		.icons
 			padding-top: 30px
 			visibility: hidden
+			@media #{$phone}
+				padding-top: 0
+				padding-bottom: 20px
 		.icon
 			fill: #000
 		.icon_cross
@@ -51,12 +64,29 @@
 		width: 490px
 		height: 480px
 		z-index: 10
+		@media #{$tablet-land}
+			padding-left: 10%
+			width: 80%
+		@media #{$tablet-port}
+			padding-left: 10%
+			width: 80%
+			height: 400px
+		@media #{$phone}
+			padding-left: 10%
+			width: 80%
+			height: 400px
 	&__languages
 	&__item
 		display: inline-block
 		padding-top: 45px
 		margin-right: 18px
 		margin-bottom: 80px
+		@media #{$tablet-port}
+			padding-top: 30px
+			margin-bottom: 50px
+		@media #{$phone}
+			padding-top: 30px
+			margin-bottom: 50px
 	&__link-lang
 		color: gray
 		text-decoration: none
@@ -66,8 +96,17 @@
 	&__phone
 		color: #000
 		margin-bottom: 15px
+		@media #{$tablet-port}
+			margin-bottom: 10px
+		@media #{$phone}
+			font-size: 14px
+			margin-bottom: 10px
 	&__email
 		margin-top: 75px
+		@media #{$tablet-port}
+			margin-top: 50px
+		@media #{$phone}
+			margin-top: 50px
 	&__burger &__icons
 		.icons
 			visibility: visible
@@ -81,6 +120,16 @@
 			visibility: visible
 		.icon_cross
 			visibility: hidden
+	&__menu
+		.menu
+			&__link
+				text-decoration: none
+				text-transform: uppercase
+				color: #000
+				font-weight: 700
+				font-size: 24px
+				.active
+					border-bottom: 3px solid #000
 
 .header_dark
 	position: relative
@@ -89,11 +138,15 @@
 	.header
 		&__container
 			width: 100%
-			max-width: 1200px
+			max-width: 1240px
 			margin: 0 auto
+			padding: 0 20px
 			display: flex
 			justify-content: space-between
 			align-items: flex-start
+			flex-wrap: wrap
+			@media #{$phone}
+				justify-content: space-around
 		&__menu-burger
 			padding-top: 27px
 		&__menu-icon
@@ -108,6 +161,12 @@
 		&__logo
 			padding-top: 28px
 			padding-bottom: 60px
+			@media #{$tablet-land}
+				padding-bottom: 50px
+			@media #{$tablet-port}
+				padding-bottom: 40px
+			@media #{$phone}
+				padding-bottom: 30px
 		&__logo-left-w,
 		&__logo-right-w
 			display: none
@@ -117,16 +176,19 @@
 		&__icons
 			.icons
 				visibility: visible
-				padding-top: 30px
+				padding-top: 27px
 			.icon
 				fill: #000
-			.icon_facebook,
+				@media #{$phone}
+					margin-left: 0
 			.icon_instagram
 				visibility: hidden
 			.icon_facebook
 				display: none
 			.icon_cross
 				display: inline
+				@media #{$phone}
+					margin-right: 10px
 		&__burger
 			display: none
 		&__burger .header__icons
@@ -140,11 +202,15 @@
 	.header
 		&__container
 			width: 100%
-			max-width: 1200px
+			max-width: 1240px
 			margin: 0 auto
+			padding: 0 20px
 			display: flex
 			justify-content: space-between
 			align-items: flex-start
+			flex-wrap: wrap
+			@media #{$phone}
+				justify-content: space-around
 		&__menu-burger
 			padding-top: 27px
 		&__menu-icon
@@ -159,6 +225,12 @@
 		&__logo
 			padding-top: 28px
 			padding-bottom: 60px
+			@media #{$tablet-land}
+				padding-bottom: 50px
+			@media #{$tablet-port}
+				padding-bottom: 40px
+			@media #{$phone}
+				padding-bottom: 30px
 		&__logo-left-w,
 		&__logo-right-w
 			display: inline
@@ -169,8 +241,15 @@
 			.icons
 				visibility: visible
 				padding-top: 30px
+				@media #{$phone}
+					padding-bottom: 20px
 			.icon
 				fill: #fff
+				@media #{$phone}
+					margin-left: 0
+			.icon_facebook
+				@media #{$phone}
+					margin-right: 10px
 			.icon_cross
 				display: none
 		&__burger
