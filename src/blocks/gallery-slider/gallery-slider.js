@@ -1,12 +1,27 @@
-$(document).ready(function () {
-	$('.gallery-slider__slider').slick({
+$(function () {
+	var $block;
+	$block = $('.gallery-slider');
+	if (!$block.length) return;
+	$slides = $block.find('.gallery-slider__slides');
+	$slides.css("display", "block");
+	
+	$prevButton = $('.gallery-slider__button-prev');
+	$nextButton = $('.gallery-slider__button-next');
+
+	$prevButton.click(function () {
+		$(this).closest($block).find($slides).slick('slickPrev');
+	})
+
+	$nextButton.click(function () {
+		$(this).closest($block).find($slides).slick('slickNext');
+	})
+
+	$slides.slick({
 		infinite: true,
 		slidesToShow: 4,
 		slidesToScroll: 2,
 		autoplay: true,
 		autoplaySpeed: 3000,
-		nextArrow: $('#arrow-right'),
-		prevArrow: $('#arrow-left'),
 		responsive: [{
 				breakpoint: 1025,
 				settings: {
