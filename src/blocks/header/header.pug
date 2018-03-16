@@ -27,7 +27,7 @@ mixin b-header(menuList, languagesList, socialList, classes)
 				+e('ul').list
 					each lang in languagesList
 						+e('li').item
-							+e('a').link-lang(class= lang.class, href= lang.ref)= lang.text
+							+e('a').link-lang(id= lang.id, href= lang.ref)= lang.text
 			+e.menu
 				+b-menu(menuList)
 			+e('p').email eqlagency@gmail.com
