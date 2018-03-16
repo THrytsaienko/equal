@@ -15,10 +15,14 @@
 		@media #{$tablet-port}
 			font-size: 14px
 		@media #{$phone}
+			flex-wrap: wrap
 			font-size: 12px
+			justify-content: space-around
 	&__image
 		padding-top: 22px
 		padding-bottom: 18px
+		@media #{$tablet-port}
+			display: none
 		@media #{$phone}
 			display: none
 	&__menu
@@ -32,10 +36,9 @@
 					margin-left: 25px
 				@media #{$tablet-port}
 					flex-direction: column
-					margin: 15px 0 15px 20px
+					margin: 15px 0
 				@media #{$phone}
-					flex-direction: column
-					margin: 15px 0 15px 15px
+					margin: 15px 0
 			&__item
 				display: inline
 				@media #{$tablet-port}
@@ -44,6 +47,7 @@
 					padding-bottom: 5px
 			&__link
 				color: $footer-gray
+				padding-right: 33px
 	&__contacts
 		display: flex
 		justify-content: space-between
@@ -52,6 +56,7 @@
 			flex-direction: column
 		@media #{$phone}
 			flex-direction: column
+			margin: 5px 0 10px 0
 	&__email,
 	&__phone
 		padding-right: 40px
@@ -61,8 +66,11 @@
 			padding-bottom: 5px
 		@media #{$tablet-port}
 			padding-bottom: 5px
+			text-align: center
 		@media #{$phone}
 			padding-bottom: 5px
+			padding-right: 20px
+			text-align: center
 	&__social-icons
 		.icons
 		.icon
@@ -72,7 +80,8 @@
 				padding-right: 9px
 			@media #{$tablet-port}
 				margin-left: 0
+				padding-right: 9px
 			@media #{$phone}
-				margin-left: 0
+				margin-left: 10px
 		.icon_cross
 			display: none
