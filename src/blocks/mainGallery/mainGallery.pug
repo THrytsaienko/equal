@@ -8,12 +8,13 @@ mixin b-mainGallery(data)
 		+e.collection.grid
 			each picture in data.pictures 
 				+e("a").link(href="#")
-					//- +e.pic.grid-item(class=picture.class) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque ab, dignissimos facilis deserunt error incidunt fugiat accusamus fuga nisi perspiciatis.
-					+e("img").picture.grid-item(class=picture.class src=asset(picture.img))
+					+e("picture")
+						+e("source")(srcset=asset(picture.imgSm) media="(max-width: 480px)")
+						+e("img").picture.grid-item(class=picture.class src=asset(picture.imgReg))
 					if picture.text
-						+e('div').text
+						+e("div").text
 							h6 #{picture.text.area}
 							h3 #{picture.text.title}
 							p #{picture.text.description}
 							|_____
-		+e.btn= data.btn
+		+e("a").btn(href="./gallery.html")= data.btn
