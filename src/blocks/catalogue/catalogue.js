@@ -40,7 +40,6 @@ function setGrideSize(){
 		sizeImg("sm", 1, 1);
 		sizeImg("md", 1, 2);
 	} else {
-		console.log($(window).width());
 		allPics.css("width", screenW);
 	}
 }
