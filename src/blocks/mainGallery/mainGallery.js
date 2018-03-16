@@ -1,15 +1,24 @@
 // =============== b-mainGallery script ===============
-$(document).ready(function(){
+$(function () {
+	var mainGalleryInit = function (event, page) {
+		if (page == undefined) page = document;
+		$page = $(page);
+		$grid = $page.find('.grid');
+		if (!$grid.length) return;
 
-	var $grid = $('.grid').isotope({
-	  layoutMode: 'packery',
-	  packery: {
-	  }
-	});
+		$grid.isotope({
+			layoutMode: 'packery',
+			packery: {
+			}
+		});
 
-	$grid.imagesLoaded().progress( function() {
-	  $grid.isotope('layout');
-	});
+		$grid.imagesLoaded().progress(function () {
+			$grid.isotope('layout');
+		});
+	};
 
+	mainGalleryInit();
+	$(document).on("pageInit", mainGalleryInit);
 });
+
 // =============== b-mainGallery script ===============
