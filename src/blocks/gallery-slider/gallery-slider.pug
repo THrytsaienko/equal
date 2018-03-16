@@ -4,7 +4,7 @@ include ../../globals/mixins
 mixin b-gallery-slider(gallerySlider)
 	+b.gallery-slider
 		+e.container
-			+e.slider
+			+e.slides
 				each item in gallerySlider
 					+e.slide(class= item.className)
 						+e('a').link(href= item.href)
@@ -15,7 +15,7 @@ mixin b-gallery-slider(gallerySlider)
 			+e.data
 				+e.albums 24 Альбома
 				+e.arrows
-					+e('svg').arrow-left(id="arrow-left")
+					+e('svg').button-prev(id="arrow-left")
 						use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#chevron-thin-left'))
-					+e('svg').arrow-right(id="arrow-right")
+					+e('svg').button-next(id="arrow-right")
 						use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#chevron-thin-right'))
