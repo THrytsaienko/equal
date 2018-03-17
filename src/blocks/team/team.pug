@@ -1,14 +1,15 @@
-mixin b-team(data)
-	+b.team
+mixin b-team-slider(teamData)
+	+b.team-slider
 		+e.container
-			each item in data
-				//- +e.controls
-				//- 	+e('p').current=item.current
-				//- 	+e('p').arrows
-				//- 		+e('span').left=item.left
-				//- 		+e('span').right=item.right			
-				//- 	+e('p').number=item.number
+			+e.controls
+				+e('svg').button-prev(id="arrow-left")
+					use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#chevron-thin-left'))
+				+e('svg').button-next(id="arrow-right")
+					use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#chevron-thin-right'))
+			+e.slides
 				+e.body
-					+e('h2').title= item.title
-					+e.description!= item.description
-				+e('img').image(src=item.image)
+					each item in teamData
+						+e('h2').title= item.title
+						+e.description!= item.description
+						+e('img').image(src=item.image)
+	

@@ -1,13 +1,25 @@
-.team
+.team-slider
 	&__container
 		max-width: 840px
 		margin: 0 auto
-		padding: 0 20px	
+		padding: 50px 20px
 		display: flex
-		justify-content: space-between
+		align-items: flex-start
+		background-color: red
+	&__controls
+		width: 10%
+		text-align: right
+		background-color: green
+	&__button-prev,
+	&__button-next
+		width: 15px
+		height: 15px
+		fill: #000
+		cursor: pointer
 	&__body
-		width: 35%
-		padding: 25px
+		width: 30%
+	&__images
+		width: 50%
 	&__title
 		text-transform: uppercase
 		font-size: 25px
@@ -25,7 +37,9 @@
 
 	img
 		width: 40%
-		height: 300px
-		background: url('/assets/i/slider-item-3.jpg')	
+		height: 300px	
 	ol
 		padding-left: 10px
+
+	&__carousel
+    width: 5%
