@@ -12,6 +12,9 @@ $(document).ready(function(){
 	});
 
 });
+$(window).resize(function(){
+	setGrideSize();
+});
 function setGrideSize(){
 	let screenW = $(window).width(),
 		allPics = $(".main-gallery__picture");
@@ -22,7 +25,6 @@ function setGrideSize(){
 		sizeImg("lg", 6, 6);
 		sizeImg("xl", 12, 12);
 	} else {
-		console.log($(window).width());
 		allPics.css("width", screenW);
 	}
 }
