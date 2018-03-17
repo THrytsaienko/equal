@@ -30,6 +30,9 @@ $(document).ready(function(){
 	});
 })
 
+$(window).resize(function(){
+	setGrideSize();
+});
 function setGrideSize(){
 	let screenW = $(window).width(),
 		allPics = $(".catalogue__picture");
