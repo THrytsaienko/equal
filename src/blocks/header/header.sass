@@ -19,19 +19,52 @@
 			justify-content: space-around
 	&__menu-burger
 		padding-top: 27px
-	&__menu-icon
-		width: 20px
-		height: 20px
-		fill: #000
-		margin-bottom: -4px
+		position: relative
 		cursor: pointer
+	&__menu-icon
+		width: 16px
+		height: 12px
+		position: absolute
+		top: 30px
+		z-index: 10
+		&-top
+			content: ""
+			top: 0
+			left: 0px
+			width: 16px
+			height: 2px
+			position: absolute
+			background-color: #000
+			transform-origin: 0 0
+			transition: transform .3s ease-out
+		&-middle
+			top: 5px
+			left: 0px
+			width: 16px
+			height: 2px
+			position: absolute
+			background-color: #000
+			transition: all .3s ease-out
+			transform-origin: 0 50%
+		&-bottom
+			content: ""
+			bottom: 0px
+			left: 0px
+			width: 16px
+			height: 2px
+			position: absolute
+			background-color: #000
+			transform-origin: 0 100%
+			transition: transform .3s ease-out	
 	&__menu-text
 		text-transform: uppercase
 		font-weight: 700
 		color: #000
+		margin-left: 30px
 	&__logo
 		padding-top: 28px
 		padding-bottom: 60px
+		margin-left: -8px
 		z-index: 100
 		@media #{$tablet-land}
 			padding-bottom: 50px
@@ -42,8 +75,6 @@
 	&__logo-left-w,
 	&__logo-right-b
 		display: none
-
-
 	&__icons
 		.icons
 			padding-top: 30px
@@ -149,11 +180,42 @@
 				justify-content: space-around
 		&__menu-burger
 			padding-top: 27px
+			cursor: pointer
 		&__menu-icon
-			width: 20px
-			height: 20px
-			fill: #000
-			margin-bottom: -4px
+			width: 16px
+			height: 12px
+			position: absolute
+			top: 30px
+			z-index: 10
+			&-top
+				content: ""
+				top: 0
+				left: 0px
+				width: 16px
+				height: 2px
+				position: absolute
+				background-color: #000
+				transform-origin: 0 0
+				transition: transform .3s ease-out
+			&-middle
+				top: 5px
+				left: 0px
+				width: 16px
+				height: 2px
+				position: absolute
+				background-color: #000
+				transition: all .3s ease-out
+				transform-origin: 0 50%
+			&-bottom
+				content: ""
+				bottom: 0px
+				left: 0px
+				width: 16px
+				height: 2px
+				position: absolute
+				background-color: #000
+				transform-origin: 0 100%
+				transition: transform .3s ease-out
 		&__menu-text
 			text-transform: uppercase
 			font-weight: 700
@@ -213,11 +275,42 @@
 				justify-content: space-around
 		&__menu-burger
 			padding-top: 27px
+			cursor: pointer
 		&__menu-icon
-			width: 20px
-			height: 20px
-			fill: #fff
-			margin-bottom: -4px
+			width: 16px
+			height: 12px
+			position: absolute
+			top: 30px
+			z-index: 10
+			&-top
+				content: ""
+				top: 0
+				left: 0px
+				width: 16px
+				height: 2px
+				position: absolute
+				background-color: #fff
+				transform-origin: 0 0
+				transition: transform .3s ease-out
+			&-middle
+				top: 5px
+				left: 0px
+				width: 16px
+				height: 2px
+				position: absolute
+				background-color: #fff
+				transition: all .3s ease-out
+				transform-origin: 0 50%
+			&-bottom
+				content: ""
+				bottom: 0px
+				left: 0px
+				width: 16px
+				height: 2px
+				position: absolute
+				background-color: #fff
+				transform-origin: 0 100%
+				transition: transform .3s ease-out
 		&__menu-text
 			text-transform: uppercase
 			font-weight: 700
