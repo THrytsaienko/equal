@@ -3,7 +3,7 @@
 // $phone, $tablet-port, $tablet-land, $desktopXS, $desktopMD, $desktopXL
 
 .header
-	position: relative
+	position: absolute
 	width: 100%
 	background-color: transparent
 	&__container
@@ -32,6 +32,7 @@
 	&__logo
 		padding-top: 28px
 		padding-bottom: 60px
+		z-index: 100
 		@media #{$tablet-land}
 			padding-bottom: 50px
 		@media #{$tablet-port}
@@ -41,6 +42,8 @@
 	&__logo-left-w,
 	&__logo-right-b
 		display: none
+
+
 	&__icons
 		.icons
 			padding-top: 30px

@@ -1,0 +1,20 @@
+include ../carousel/carousel
+
+mixin b-mainSlider(data)
+  +b.main-slider
+    +e.info-container
+      +e('img').logo(src= asset(data.logo))
+      +e('p').tag= data.tag
+      +e('p').headline= data.headline
+      +e('p').description= data.description
+      +e.socials
+        +e('a')(href= data.IGlink, target='_blank')
+          +e('img').facebook(src= asset(data.socialsFB))
+        +e('a')(href= data.FBlink, target='_blank')
+          +e('img').instagram(src= asset(data.socialsIG))
+    +e.carousel
+      +b-carousel(data.mainSliderImages)
+      
+  
+      
+    

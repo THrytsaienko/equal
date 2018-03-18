@@ -54,6 +54,32 @@
 
 //- project's data goes here
 
+//- ==================== b-mainSlider ====================
+-
+	var mainSlider =
+	{
+		logo: "i/mainSlider/mainSlider-logo.jpg",
+		tag: "Наша сфера",
+		headline: "Бизнес фотография",
+		description: "Команда профессионалов, которые делают визуальный контент для любого бизнеса",
+		FBlink: "https://www.instagram.com",
+		IGlink: "https://www.facebook.com",
+		socialsFB: "i/mainSlider/mainSlider-fb.png",
+		socialsIG: "i/mainSlider/mainSlider-ig.png",
+		mainSliderImages: [{
+			img: "i/mainSlider/01.jpg"
+		},
+		{
+		 	img: "i/mainSlider/02.jpg"
+		},
+		{
+		 	img: "i/mainSlider/03.jpg"
+		 }]
+	}
+
+
+
+
 //- ==================== b-mainGallery ====================
 -
 	var mainGallery = 
@@ -65,19 +91,23 @@
 			pictures: 
 				[
 					{
-						img: "i/main-gallery/lobby.jpg", 
+						imgReg: "i/main-gallery/lobby.jpg", 
+						imgSm: "i/main-gallery/lobby_sm.jpg", 
 						class: "main-gallery__picture_lg",
 					},
 					{
-						img: "i/main-gallery/food_serve.jpg", 
+						imgReg: "i/main-gallery/food_serve.jpg", 
+						imgSm: "i/main-gallery/food_serve_sm.jpg", 
 						class: "main-gallery__picture_xs",
 					},
 					{
-						img: "i/main-gallery/rest_supply.jpg", 
+						imgReg: "i/main-gallery/rest_supply.jpg", 
+						imgSm: "i/main-gallery/rest_supply_sm.jpg", 
 						class: "main-gallery__picture_xs",
 					},
 					{
-						img: "i/main-gallery/trip.jpg", 
+						imgReg: "i/main-gallery/trip.jpg", 
+						imgSm: "i/main-gallery/trip_sm.jpg", 
 						class: "main-gallery__picture_sm",
 						text: 
 							{
@@ -87,15 +117,18 @@
 							}
 					},
 					{
-						img: "i/main-gallery/tesla.jpg", 
+						imgReg: "i/main-gallery/tesla.jpg", 
+						imgSm: "i/main-gallery/tesla_sm.jpg", 
 						class: "main-gallery__picture_md",
 					},
 					{
-						img: "i/main-gallery/wedding.jpg", 
+						imgReg: "i/main-gallery/wedding.jpg", 
+						imgSm: "i/main-gallery/wedding_sm.jpg", 
 						class: "main-gallery__picture_md",
 					},
 					{
-						img: "i/main-gallery/food_dish.jpg", 
+						imgReg: "i/main-gallery/food_dish.jpg", 
+						imgSm: "i/main-gallery/food_dish_sm.jpg", 
 						class: "main-gallery__picture_md",
 					},
 				],
@@ -153,7 +186,7 @@
 					}	
 				]
 		}
-
+//- ==================== b-clients ====================
 -
 	var imagesList = [
 		{
@@ -354,9 +387,7 @@
 		date: "8.13.2017"
 	}
 
-//- ==================== b-clients ====================
 
-//- ==================== b-catalogue ====================
 -
 	var gallerySlider = [
 		{
@@ -456,13 +487,15 @@
 			}
 		];
 
+//- ==================== b-catalogue ====================
 -
 	var catPics =
 		[
 			{
 				isotopeClass: "cars", 
 				num: "01",
-				href: "i/catalogue/vw_1.jpg",
+				reg: "i/catalogue/vw_1.jpg",
+				sm: "i/catalogue/vw_1_sm.jpg",
 				area: "автомобили",
 				title: "volkswagen festival",
 				size: "catalogue__picture_sm"
@@ -470,7 +503,8 @@
 			{
 				isotopeClass: "business", 
 				num: "02",
-				href: "i/catalogue/umf.jpg",
+				reg: "i/catalogue/umf.jpg",
+				sm: "i/catalogue/umf_sm.jpg",
 				area: "бизнес",
 				title: "ukrainian medical festival",
 				size: "catalogue__picture_sm"
@@ -478,7 +512,8 @@
 			{
 				isotopeClass: "restaurants", 
 				num: "03",
-				href: "i/catalogue/beef_wine.jpg",
+				reg: "i/catalogue/beef_wine.jpg",
+				sm: "i/catalogue/beef_wine_sm.jpg",
 				area: "рестораны",
 				title: "beef мясо & вино restaurant",
 				size: "catalogue__picture_sm"
@@ -486,7 +521,8 @@
 			{
 				isotopeClass: "wedding", 
 				num: "04",
-				href: "i/catalogue/engagement.jpg",
+				reg: "i/catalogue/engagement.jpg",
+				sm: "i/catalogue/engagement_sm.jpg",
 				area: "свадьба",
 				title: "обручальный момент",
 				size: "catalogue__picture_sm"
@@ -494,7 +530,8 @@
 			{
 				isotopeClass: "cities", 
 				num: "05",
-				href: "i/catalogue/golden_gate_br.jpg",
+				reg: "i/catalogue/golden_gate_br.jpg",
+				sm: "i/catalogue/golden_gate_br_sm.jpg",
 				area: "город",
 				title: "golden gate",
 				size: "catalogue__picture_md"
@@ -502,7 +539,8 @@
 			{
 				isotopeClass: "cars", 
 				num: "06",
-				href: "i/catalogue/vw_2.jpg",
+				reg: "i/catalogue/vw_2.jpg",
+				sm: "i/catalogue/vw_2_sm.jpg",
 				area: "автомобили",
 				title: "volkswagen festival",
 				size: "catalogue__picture_sm"
@@ -510,7 +548,8 @@
 			{
 				isotopeClass: "cars", 
 				num: "07",
-				href: "i/catalogue/vw_3.jpg",
+				reg: "i/catalogue/vw_3.jpg",
+				sm: "i/catalogue/vw_3_sm.jpg",
 				area: "автомобили",
 				title: "volkswagen festival",
 				size: "catalogue__picture_sm"
@@ -518,7 +557,8 @@
 			{
 				isotopeClass: "business", 
 				num: "08",
-				href: "i/catalogue/guys_work.jpg",
+				reg: "i/catalogue/guys_work.jpg",
+				sm: "i/catalogue/guys_work_sm.jpg",
 				area: "бизнес",
 				title: "ребята и работа",
 				size: "catalogue__picture_sm"
@@ -526,7 +566,8 @@
 			{
 				isotopeClass: "cities", 
 				num: "09",
-				href: "i/catalogue/budapest.jpg",
+				reg: "i/catalogue/budapest.jpg",
+				sm: "i/catalogue/budapest_sm.jpg",
 				area: "города",
 				title: "budapest",
 				size: "catalogue__picture_sm"
@@ -534,7 +575,8 @@
 			{
 				isotopeClass: "", 
 				num: "10",
-				href: "i/catalogue/desert.jpg",
+				reg: "i/catalogue/desert.jpg",
+				sm: "i/catalogue/desert_sm.jpg",
 				area: "категория",
 				title: "пустынная пустыня",
 				size: "catalogue__picture_sm"
@@ -542,7 +584,8 @@
 			{
 				isotopeClass: "cities", 
 				num: "11",
-				href: "i/catalogue/nyc.jpg",
+				reg: "i/catalogue/nyc.jpg",
+				sm: "i/catalogue/nyc_sm.jpg",
 				area: "города",
 				title: "new york city",
 				size: "catalogue__picture_md"
@@ -550,7 +593,8 @@
 			{
 				isotopeClass: "", 
 				num: "12",
-				href: "i/catalogue/white_palace.jpg",
+				reg: "i/catalogue/white_palace.jpg",
+				sm: "i/catalogue/white_palace_sm.jpg",
 				area: "архитектура",
 				title: "белый дворец",
 				size: "catalogue__picture_md"
@@ -558,7 +602,8 @@
 			{
 				isotopeClass: "cities", 
 				num: "13",
-				href: "i/catalogue/brick_house.jpg",
+				reg: "i/catalogue/brick_house.jpg",
+				sm: "i/catalogue/brick_house_sm.jpg",
 				area: "город",
 				title: "красный дом",
 				size: "catalogue__picture_sm"
@@ -566,7 +611,8 @@
 			{
 				isotopeClass: "business", 
 				num: "14",
-				href: "i/catalogue/laptop_desk.jpg",
+				reg: "i/catalogue/laptop_desk.jpg",
+				sm: "i/catalogue/laptop_desk_sm.jpg",
 				area: "бизнес",
 				title: "ноут, стол, стул",
 				size: "catalogue__picture_sm"
@@ -574,7 +620,8 @@
 			{
 				isotopeClass: "cars", 
 				num: "15",
-				href: "i/catalogue/vw_4_p.jpg",
+				reg: "i/catalogue/vw_4_p.jpg",
+				sm: "i/catalogue/vw_4_p_sm.jpg",
 				area: "автомобили",
 				title: "volkswagen festival",
 				size: "catalogue__picture_md"
@@ -582,7 +629,8 @@
 			{
 				isotopeClass: "business", 
 				num: "16",
-				href: "i/catalogue/shoes_foot.jpeg",
+				reg: "i/catalogue/shoes_foot.jpg",
+				sm: "i/catalogue/shoes_foot_sm.jpg",
 				area: "бизнес",
 				title: "ноги и туфли мужика",
 				size: "catalogue__picture_sm"
@@ -590,7 +638,8 @@
 			{
 				isotopeClass: "sea", 
 				num: "17",
-				href: "i/catalogue/wave.jpg",
+				reg: "i/catalogue/wave.jpg",
+				sm: "i/catalogue/wave_sm.jpg",
 				area: "море",
 				title: "набегающая волна",
 				size: "catalogue__picture_sm"

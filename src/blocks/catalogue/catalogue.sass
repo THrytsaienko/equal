@@ -1,24 +1,31 @@
 @import '../../assets/s/variables'
 // breakpoints
 // $phone, $tablet-port, $tablet-land, $desktopXS, $desktopMD, $desktopXL
-$catalogue-width: 800px
-$sm-pic: $catalogue-width/3
 $gutter: 10px
 
 
 .catalogue
-	max-width: $catalogue-width
 	margin: 0px auto
+	max-width: 1240px
+	min-height: 100vh
 	.menu
-		margin: 10px 0px
+		margin-top: 10px
 		&__list
-			text-align: center
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
 			text-transform: uppercase
-			padding: 10px
+			padding: 0px $gutter
+		&__item
+			height: 33px
+			@media #{$phone}, #{$tablet-port}
+				margin: 0px
+				flex-basis: 100%
+				text-align: center
 		&__link
-			padding: 10px
+			padding: 5px
+			display: block
 	&__collection
-		max-width: $catalogue-width
 		&:after
 			content: ''
 			display: block
@@ -27,22 +34,16 @@ $gutter: 10px
 		text-align: center
 	&__picture
 		border: $gutter solid white
-		&_sm
-			width: $sm-pic
-			height: $sm-pic
-		&_md
-			width: $sm-pic
-			height: $sm-pic*2
+		filter: grayscale(50%)
 	&__text
 		position: absolute
 		top: 50%
 		left: 50%
 		transform: translate(-50%, -50%)
-		color: #eff2f4
+		color: white
 		text-transform: uppercase
 		h6
 			padding: 10px
 			font-weight: 100
 		h3
-			width: $sm-pic - 65px
 			font-weight: 100
