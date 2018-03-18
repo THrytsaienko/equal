@@ -2,14 +2,22 @@ mixin b-team-slider(teamData)
 	+b.team-slider
 		+e.container
 			+e.controls
-				+e('svg').button-prev(id="arrow-left")
-					use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#chevron-thin-left'))
-				+e('svg').button-next(id="arrow-right")
-					use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#chevron-thin-right'))
+				+e('h4').current 02
+				+e.buttons
+					+e('svg').button-prev
+						use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#chevron-thin-left'))
+					+e('svg').button-next
+						use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#chevron-thin-right'))
+			+e.info
+				+e.info-container
+					+e('h3').title= teamData.title
+						each item in teamData.description
+							+e('p').paragraph= item.text
+					+e('p').subtitle= teamData.subtitle
+					+e('ol').list
+						each item in teamData.advantages
+							+e('li').list-item= item.advantage
 			+e.slides
-				+e.body
-					each item in teamData
-						+e('h2').title= item.title
-						+e.description!= item.description
-						+e('img').image(src=item.image)
-	
+				each item in teamData.images
+					+e.slide
+						+e('img').img(src=asset(item.image))

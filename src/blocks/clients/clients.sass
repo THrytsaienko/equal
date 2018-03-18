@@ -1,14 +1,16 @@
 @import '../../assets/s/variables'
-$clients-width: 800px
 // breakpoints
 // $phone, $tablet-port, $tablet-land, $desktopXS, $desktopMD, $desktopXL
 
 .clients
-	max-width: $clients-width
 	margin: 0px auto
+	max-width: 1240px
 	&__header
+		margin: 0px $gutter 50px $gutter
 		display: flex
-		margin-bottom: 50px
+		@media #{$phone}, #{$tablet-port}
+			margin: 0px $gutter 0px $gutter
+
 	&__current
 		flex-basis: 15%
 	&__title
@@ -17,9 +19,10 @@ $clients-width: 800px
 	&__collection
 		display: flex
 		flex-wrap: wrap
-		justify-content: center
+		justify-content: space-around
 		align-items: center
 	&__link
+		flex-basis: 20%
+		text-align: center
 	&__logo
-		width: $clients-width/5-20
-		margin: 10px
+		max-width: 90%

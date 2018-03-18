@@ -1,17 +1,14 @@
 -
 	var menuList = [
 		{
-			class: 'active',
 			href: 'catalogue.html',
 			text: 'Галерея'
 		},
 		{
-			class: '',
 			href: '#',
 			text: 'О нас'
 		},
 		{
-			class: '',
 			href: '#',
 			text: 'Блог'
 		}
@@ -79,7 +76,10 @@
 		 	img: "i/mainSlider/03.jpg"
 		 }]
 	}
-	
+
+
+
+
 //- ==================== b-mainGallery ====================
 -
 	var mainGallery = 
@@ -91,19 +91,23 @@
 			pictures: 
 				[
 					{
-						img: "i/main-gallery/lobby.jpg", 
+						imgReg: "i/main-gallery/lobby.jpg", 
+						imgSm: "i/main-gallery/lobby_sm.jpg", 
 						class: "main-gallery__picture_lg",
 					},
 					{
-						img: "i/main-gallery/food_serve.jpg", 
+						imgReg: "i/main-gallery/food_serve.jpg", 
+						imgSm: "i/main-gallery/food_serve_sm.jpg", 
 						class: "main-gallery__picture_xs",
 					},
 					{
-						img: "i/main-gallery/rest_supply.jpg", 
+						imgReg: "i/main-gallery/rest_supply.jpg", 
+						imgSm: "i/main-gallery/rest_supply_sm.jpg", 
 						class: "main-gallery__picture_xs",
 					},
 					{
-						img: "i/main-gallery/trip.jpg", 
+						imgReg: "i/main-gallery/trip.jpg", 
+						imgSm: "i/main-gallery/trip_sm.jpg", 
 						class: "main-gallery__picture_sm",
 						text: 
 							{
@@ -113,15 +117,18 @@
 							}
 					},
 					{
-						img: "i/main-gallery/tesla.jpg", 
+						imgReg: "i/main-gallery/tesla.jpg", 
+						imgSm: "i/main-gallery/tesla_sm.jpg", 
 						class: "main-gallery__picture_md",
 					},
 					{
-						img: "i/main-gallery/wedding.jpg", 
+						imgReg: "i/main-gallery/wedding.jpg", 
+						imgSm: "i/main-gallery/wedding_sm.jpg", 
 						class: "main-gallery__picture_md",
 					},
 					{
-						img: "i/main-gallery/food_dish.jpg", 
+						imgReg: "i/main-gallery/food_dish.jpg", 
+						imgSm: "i/main-gallery/food_dish_sm.jpg", 
 						class: "main-gallery__picture_md",
 					},
 				],
@@ -179,36 +186,190 @@
 					}	
 				]
 		}
-
+//- ==================== b-clients ====================
 -
 	var imagesList = [
 		{
 			className: "gallery-content__item-1",
-			img: "i/gallery-content/umf-1.jpg"
+			images: [
+				{
+					img: "i/gallery-content/umf-1-320.jpg",
+					media: "(max-width: 320px)"
+				},
+				{
+					img: "i/gallery-content/umf-1-480.jpg",
+					media: "(max-width: 480px)"
+				},
+				{
+					img: "i/gallery-content/umf-1-768.jpg",
+					media: "(max-width: 768px)"
+				},
+				{
+					img: "i/gallery-content/umf-1-1024.jpg",
+					media: "(max-width: 1024px)"
+				},
+				{
+					img: "i/gallery-content/umf-1-1600.jpg",
+					media: "(max-width: 2000px)"
+				}
+			],
+			singleImg: "i/gallery-content/umf-1.jpg"
 		},
 		{
 			className: "gallery-content__item-2",
-			img: "i/gallery-content/umf-2.jpg"
+			images: [
+				{
+					img: "i/gallery-content/umf-2-320.jpg",
+					media: "(max-width: 320px)"
+				},
+				{
+					img: "i/gallery-content/umf-2-480.jpg",
+					media: "(max-width: 480px)"
+				},
+				{
+					img: "i/gallery-content/umf-2-768.jpg",
+					media: "(max-width: 768px)"
+				},
+				{
+					img: "i/gallery-content/umf-2-1024.jpg",
+					media: "(max-width: 1024px)"
+				},
+				{
+					img: "i/gallery-content/umf-2-1600.jpg",
+					media: "(max-width: 2000px)"
+				}
+			],
+			singleImg: "i/gallery-content/umf-2.jpg"
 		},
 		{
 			className: "gallery-content__item-3",
-			img: "i/gallery-content/umf-3.jpg"
+			images: [
+				{
+					img: "i/gallery-content/umf-3-320.jpg",
+					media: "(max-width: 320px)"
+				},
+				{
+					img: "i/gallery-content/umf-3-480.jpg",
+					media: "(max-width: 480px)"
+				},
+				{
+					img: "i/gallery-content/umf-3-768.jpg",
+					media: "(max-width: 768px)"
+				},
+				{
+					img: "i/gallery-content/umf-3-1024.jpg",
+					media: "(max-width: 1024px)"
+				},
+				{
+					img: "i/gallery-content/umf-3-1600.jpg",
+					media: "(max-width: 2000px)"
+				}
+			],
+			singleImg: "i/gallery-content/umf-3.jpg"
 		},
 		{
 			className: "gallery-content__item-4",
-			img: "i/gallery-content/umf-4.jpg"
+			images: [
+				{
+					img: "i/gallery-content/umf-4-320.jpg",
+					media: "(max-width: 320px)"
+				},
+				{
+					img: "i/gallery-content/umf-4-480.jpg",
+					media: "(max-width: 480px)"
+				},
+				{
+					img: "i/gallery-content/umf-4-768.jpg",
+					media: "(max-width: 768px)"
+				},
+				{
+					img: "i/gallery-content/umf-4-1024.jpg",
+					media: "(max-width: 1024px)"
+				},
+				{
+					img: "i/gallery-content/umf-4-1600.jpg",
+					media: "(max-width: 2000px)"
+				}
+			],
+			singleImg: "i/gallery-content/umf-4.jpg"
 		},
 		{
 			className: "gallery-content__item-5",
-			img: "i/gallery-content/umf-5.jpg"
+			images: [
+				{
+					img: "i/gallery-content/umf-5-320.jpg",
+					media: "(max-width: 320px)"
+				},
+				{
+					img: "i/gallery-content/umf-5-480.jpg",
+					media: "(max-width: 480px)"
+				},
+				{
+					img: "i/gallery-content/umf-5-768.jpg",
+					media: "(max-width: 768px)"
+				},
+				{
+					img: "i/gallery-content/umf-5-1024.jpg",
+					media: "(max-width: 1024px)"
+				},
+				{
+					img: "i/gallery-content/umf-5-1600.jpg",
+					media: "(max-width: 2000px)"
+				}
+			],
+			singleImg: "i/gallery-content/umf-5.jpg"
 		},
 		{
 			className: "gallery-content__item-6",
-			img: "i/gallery-content/umf-6.jpg"
+			images: [
+				{
+					img: "i/gallery-content/umf-6-320.jpg",
+					media: "(max-width: 320px)"
+				},
+				{
+					img: "i/gallery-content/umf-6-480.jpg",
+					media: "(max-width: 480px)"
+				},
+				{
+					img: "i/gallery-content/umf-6-768.jpg",
+					media: "(max-width: 768px)"
+				},
+				{
+					img: "i/gallery-content/umf-6-1024.jpg",
+					media: "(max-width: 1024px)"
+				},
+				{
+					img: "i/gallery-content/umf-6-1600.jpg",
+					media: "(max-width: 2000px)"
+				}
+			],
+			singleImg: "i/gallery-content/umf-6.jpg"
 		},
 		{
 			className: "gallery-content__item-7",
-			img: "i/gallery-content/umf-7.jpg"
+			images: [
+				{
+					img: "i/gallery-content/umf-7-320.jpg",
+					media: "(max-width: 320px)"
+				},
+				{
+					img: "i/gallery-content/umf-7-480.jpg",
+					media: "(max-width: 480px)"
+				},
+				{
+					img: "i/gallery-content/umf-7-768.jpg",
+					media: "(max-width: 768px)"
+				},
+				{
+					img: "i/gallery-content/umf-7-1024.jpg",
+					media: "(max-width: 1024px)"
+				},
+				{
+					img: "i/gallery-content/umf-7-1600.jpg",
+					media: "(max-width: 2000px)"
+				}
+			],
+			singleImg: "i/gallery-content/umf-7.jpg"
 		}
 	]
 
@@ -226,9 +387,7 @@
 		date: "8.13.2017"
 	}
 
-//- ==================== b-clients ====================
 
-//- ==================== b-catalogue ====================
 -
 	var gallerySlider = [
 		{
@@ -328,13 +487,15 @@
 			}
 		];
 
+//- ==================== b-catalogue ====================
 -
 	var catPics =
 		[
 			{
 				isotopeClass: "cars", 
 				num: "01",
-				href: "i/catalogue/vw_1.jpg",
+				reg: "i/catalogue/vw_1.jpg",
+				sm: "i/catalogue/vw_1_sm.jpg",
 				area: "автомобили",
 				title: "volkswagen festival",
 				size: "catalogue__picture_sm"
@@ -342,7 +503,8 @@
 			{
 				isotopeClass: "business", 
 				num: "02",
-				href: "i/catalogue/umf.jpg",
+				reg: "i/catalogue/umf.jpg",
+				sm: "i/catalogue/umf_sm.jpg",
 				area: "бизнес",
 				title: "ukrainian medical festival",
 				size: "catalogue__picture_sm"
@@ -350,7 +512,8 @@
 			{
 				isotopeClass: "restaurants", 
 				num: "03",
-				href: "i/catalogue/beef_wine.jpg",
+				reg: "i/catalogue/beef_wine.jpg",
+				sm: "i/catalogue/beef_wine_sm.jpg",
 				area: "рестораны",
 				title: "beef мясо & вино restaurant",
 				size: "catalogue__picture_sm"
@@ -358,7 +521,8 @@
 			{
 				isotopeClass: "wedding", 
 				num: "04",
-				href: "i/catalogue/engagement.jpg",
+				reg: "i/catalogue/engagement.jpg",
+				sm: "i/catalogue/engagement_sm.jpg",
 				area: "свадьба",
 				title: "обручальный момент",
 				size: "catalogue__picture_sm"
@@ -366,7 +530,8 @@
 			{
 				isotopeClass: "cities", 
 				num: "05",
-				href: "i/catalogue/golden_gate_br.jpg",
+				reg: "i/catalogue/golden_gate_br.jpg",
+				sm: "i/catalogue/golden_gate_br_sm.jpg",
 				area: "город",
 				title: "golden gate",
 				size: "catalogue__picture_md"
@@ -374,7 +539,8 @@
 			{
 				isotopeClass: "cars", 
 				num: "06",
-				href: "i/catalogue/vw_2.jpg",
+				reg: "i/catalogue/vw_2.jpg",
+				sm: "i/catalogue/vw_2_sm.jpg",
 				area: "автомобили",
 				title: "volkswagen festival",
 				size: "catalogue__picture_sm"
@@ -382,7 +548,8 @@
 			{
 				isotopeClass: "cars", 
 				num: "07",
-				href: "i/catalogue/vw_3.jpg",
+				reg: "i/catalogue/vw_3.jpg",
+				sm: "i/catalogue/vw_3_sm.jpg",
 				area: "автомобили",
 				title: "volkswagen festival",
 				size: "catalogue__picture_sm"
@@ -390,7 +557,8 @@
 			{
 				isotopeClass: "business", 
 				num: "08",
-				href: "i/catalogue/guys_work.jpg",
+				reg: "i/catalogue/guys_work.jpg",
+				sm: "i/catalogue/guys_work_sm.jpg",
 				area: "бизнес",
 				title: "ребята и работа",
 				size: "catalogue__picture_sm"
@@ -398,7 +566,8 @@
 			{
 				isotopeClass: "cities", 
 				num: "09",
-				href: "i/catalogue/budapest.jpg",
+				reg: "i/catalogue/budapest.jpg",
+				sm: "i/catalogue/budapest_sm.jpg",
 				area: "города",
 				title: "budapest",
 				size: "catalogue__picture_sm"
@@ -406,7 +575,8 @@
 			{
 				isotopeClass: "", 
 				num: "10",
-				href: "i/catalogue/desert.jpg",
+				reg: "i/catalogue/desert.jpg",
+				sm: "i/catalogue/desert_sm.jpg",
 				area: "категория",
 				title: "пустынная пустыня",
 				size: "catalogue__picture_sm"
@@ -414,7 +584,8 @@
 			{
 				isotopeClass: "cities", 
 				num: "11",
-				href: "i/catalogue/nyc.jpg",
+				reg: "i/catalogue/nyc.jpg",
+				sm: "i/catalogue/nyc_sm.jpg",
 				area: "города",
 				title: "new york city",
 				size: "catalogue__picture_md"
@@ -422,7 +593,8 @@
 			{
 				isotopeClass: "", 
 				num: "12",
-				href: "i/catalogue/white_palace.jpg",
+				reg: "i/catalogue/white_palace.jpg",
+				sm: "i/catalogue/white_palace_sm.jpg",
 				area: "архитектура",
 				title: "белый дворец",
 				size: "catalogue__picture_md"
@@ -430,7 +602,8 @@
 			{
 				isotopeClass: "cities", 
 				num: "13",
-				href: "i/catalogue/brick_house.jpg",
+				reg: "i/catalogue/brick_house.jpg",
+				sm: "i/catalogue/brick_house_sm.jpg",
 				area: "город",
 				title: "красный дом",
 				size: "catalogue__picture_sm"
@@ -438,7 +611,8 @@
 			{
 				isotopeClass: "business", 
 				num: "14",
-				href: "i/catalogue/laptop_desk.jpg",
+				reg: "i/catalogue/laptop_desk.jpg",
+				sm: "i/catalogue/laptop_desk_sm.jpg",
 				area: "бизнес",
 				title: "ноут, стол, стул",
 				size: "catalogue__picture_sm"
@@ -446,7 +620,8 @@
 			{
 				isotopeClass: "cars", 
 				num: "15",
-				href: "i/catalogue/vw_4_p.jpg",
+				reg: "i/catalogue/vw_4_p.jpg",
+				sm: "i/catalogue/vw_4_p_sm.jpg",
 				area: "автомобили",
 				title: "volkswagen festival",
 				size: "catalogue__picture_md"
@@ -454,7 +629,8 @@
 			{
 				isotopeClass: "business", 
 				num: "16",
-				href: "i/catalogue/shoes_foot.jpeg",
+				reg: "i/catalogue/shoes_foot.jpg",
+				sm: "i/catalogue/shoes_foot_sm.jpg",
 				area: "бизнес",
 				title: "ноги и туфли мужика",
 				size: "catalogue__picture_sm"
@@ -462,31 +638,46 @@
 			{
 				isotopeClass: "sea", 
 				num: "17",
-				href: "i/catalogue/wave.jpg",
+				reg: "i/catalogue/wave.jpg",
+				sm: "i/catalogue/wave_sm.jpg",
 				area: "море",
 				title: "набегающая волна",
 				size: "catalogue__picture_sm"
 			}
 		]
 //- ==================== b-catalogue ====================
-
 -
-	var teamData = [
-		{
-			title: "Команда",
-			description: "<p>Каждый из нас делает по 400 съемок в год, и каждая успешная. Мы непросто делаем для вас историю.</p><p>Сформировать рынок отечественной фотографии, объединить специалистов готовых работать над его развитием.</p><h3> Наши ценности</h3><ol><li>Полная ответсвенность за свою работу</li><li>Доверие и уважение всех коллег и партнеров</li><li>Поддержка и взаимопомощь</li>",
-			image: "/assets/i/team/slider-item-1.jpg"
-		}, {
-			title: "Komanda",
-			description: "<p>asdfasdfasfdasdfasdf</p><p>asdfasdfasfdasdfasdf</p><h3>asdfsadf</h3></ul>",
-			image: "/assets/i/team/slider-item-2.jpg"
-		}, {
-			title: "Komanda",
-			description: "<p>asdfasdfasfdasdfasdf</p><p>asdfasdfasfdasdfasdf</p><h3>asdfsadf</h3></ul>",
-			image: "/assets/i/team/slider-item-3.jpg"
-		}
-	]
-
-
-
-		
+	var teamData = {
+		title: "КОМАНДА",
+		description: [
+			{
+				text: "Каждый из нас делает по 400 съемок в год, и каждая успешная. Мы непросто делаем для вас историю."
+			},
+			{
+				text: "Сформировать рынок отечественной фотографии, объединить специалистов готовых работать над его развитием."
+			}
+		],
+		subtitle: "Наши ценности",
+		advantages: [
+			{
+				advantage: "Полная ответсвенность за свою работу"
+			},
+			{
+				advantage: "Доверие и уважение всех коллег и партнеров"
+			},
+			{
+				advantage: "Поддержка и взаимопомощь"
+			}
+		],
+		images: [
+			{
+				image: "i/team/slider-item-1.jpg"
+			},
+			{
+				image: "i/team/slider-item-2.jpg"
+			},
+			{
+				image: "i/team/slider-item-3.jpg"
+			}
+		]
+	}
