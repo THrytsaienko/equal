@@ -64,7 +64,7 @@
 	&__logo
 		padding-top: 28px
 		padding-bottom: 60px
-		margin-left: -8px
+		margin-left: -15px
 		z-index: 100
 		@media #{$tablet-land}
 			padding-bottom: 50px
@@ -76,6 +76,7 @@
 	&__logo-right-b
 		display: none
 	&__icons
+		visibility: hidden
 		.icons
 			padding-top: 30px
 			visibility: hidden
@@ -84,8 +85,6 @@
 				padding-bottom: 20px
 		.icon
 			fill: #000
-		.icon_cross
-			display: none
 	&__burger
 		position: absolute
 		top: 55px
@@ -149,8 +148,6 @@
 		.icon_facebook,
 		.icon_instagram
 			visibility: visible
-		.icon_cross
-			visibility: hidden
 	&__menu
 		.menu
 			&__item
@@ -239,20 +236,7 @@
 			display: inline
 		&__icons
 			.icons
-				visibility: visible
-				padding-top: 27px
-			.icon
-				fill: #000
-				@media #{$phone}
-					margin-left: 0
-			.icon_instagram
 				visibility: hidden
-			.icon_facebook
-				display: none
-			.icon_cross
-				display: inline
-				@media #{$phone}
-					margin-right: 10px
 		&__burger
 			display: none
 		&__burger .header__icons
@@ -345,8 +329,6 @@
 			.icon_facebook
 				@media #{$phone}
 					margin-right: 10px
-			.icon_cross
-				display: none
 		&__burger
 			display: none
 		&__burger .header__icons
