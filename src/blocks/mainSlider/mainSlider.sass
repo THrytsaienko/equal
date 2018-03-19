@@ -4,6 +4,8 @@
 	display: flex
 	align-items: flex-start
 	justify-content: space-between
+	// @media #{$desktopXS}
+	// 	flex-direction: column
 	@media #{$tablet-land}
 		flex-direction: column
 	@media #{$tablet-port}
@@ -16,18 +18,34 @@
 		padding-top: 130px
 		position: relative
 		left: 24%
+		@media #{$desktopXS}
+			width: 100%
+			padding-top: 100px
+			left: 14%
 		@media #{$tablet-land}
-			width: 90%
+			width: 80%
+			padding-top: 100px
+			left: 14%
 		@media #{$tablet-port}
-			// width: 100%
+			width: 80%
+			padding-top: 100px
+			left: 14%
 		@media #{$phone}
-			// width: 100%
+			width: 100%
+			padding-top: 100px
+			left: 14%
 
 	&__tag
 		text-transform: uppercase
 		font-size: 10px
 		margin-bottom: 8px
+		@media #{$desktopXS}
+			width: 100%
+			display: block
 		@media #{$tablet-land}
+			width: 100%
+			display: block
+		@media #{$tablet-port}
 			width: 100%
 			display: block
 
@@ -42,18 +60,31 @@
 		@media #{$tablet-land}
 			width: 100%
 			text-align: center
+		@media #{$tablet-port}
+			width: 100%
+			text-align: center
 
 
 	&__description
 		font-size: 13px
 		line-height: 20px
 		width: 300px
-		// @media #{$tablet-land}
-		//   width: 100%
-		//   display: block
+		@media #{$desktopXS}
+		  width: 200px
+		  display: block
+		@media #{$tablet-land}
+		  width: 100%
+		  display: block
+		@media #{$tablet-port}
+		  width: 100%
+		  display: block
 
 	&__socials
 		margin-top: 50px
+		@media #{$tablet-land}
+			visibility: hidden
+		@media #{$tablet-port}
+			visibility: hidden
 		.icons
 			.icon
 				margin-left: 0
@@ -67,12 +98,16 @@
 		position: absolute
 		left: -70px
 		top: 157px
+		@media #{$desktopXS}
+			top: 130px
 
 	&__carousel
 		width: 50.5%
+		// @media #{$desktopXS}
+		// 	width: 100%
 		@media #{$tablet-land}
 			width: 100%
-		@media #{$tablet-land}
+		@media #{$tablet-port}
 			width: 100%
 		@media #{$phone}
 			width: 100%
