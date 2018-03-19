@@ -1,19 +1,18 @@
 @import '../../assets/s/variables'
-$gutter: 10px
-
-*
-	box-sizing: border-box
 // breakpoints
 // $phone, $tablet-port, $tablet-land, $desktopXS, $desktopMD, $desktopXL
 
 .main-gallery
 	margin: 0px auto
 	max-width: 1240px
+	padding: 0 20px
 	&__header
 		margin: 20px $gutter 0px $gutter
 		display: flex
 		color: #000000
+		margin-top: 140px
 	&__collection
+		margin-top: 100px
 		&:after
 			content: ''
 			display: block
@@ -26,12 +25,16 @@ $gutter: 10px
 		flex-basis: 35%
 	&__description
 		flex-basis: 35%
+		font-size: 13px
+		line-height: 20px
+		letter-spacing: .5px
 		@media #{$phone}, #{$tablet-port} 
 			display: none
 	&__total
 		flex-basis: 15%
 		text-transform: uppercase
-		text-align: right		
+		text-align: right
+		font-size: 13px
 		@media #{$phone}, #{$tablet-port} 
 			display: none
 	&__link
@@ -60,6 +63,6 @@ $gutter: 10px
 		max-width: 200px
 		background-color: black
 		color: white
-		margin: 0 auto 10px auto
+		margin: 30px auto 10px auto
 		@media #{$phone}, #{$tablet-port}
 			max-width: 100%
