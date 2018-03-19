@@ -10,7 +10,6 @@ var svgSprite = require('gulp-svg-sprite');
 var processors = [
 	autoprefixer({browsers: ['last 2 version']})
 ];
-var yaml = require('gulp-yaml');
 var concat = require('gulp-concat');
 var webpack = require('webpack-stream');
 
@@ -19,12 +18,6 @@ const ignorePug = [
 	'!src/blocks/**',
 	'!src/globals/**'
 ];
-
-gulp.task('yaml', function(){
-	return gulp.src('src/**/*.yml')
-		.pipe(yaml())
-		.pipe(gulp.dest('build/assets'))
-});
 
 // Basic configuration example
 var config = {
@@ -36,25 +29,25 @@ var config = {
 gulp.task('sprites', function () {
 	return gulp.src('src/assets/svg/*.svg')
 		.pipe(svgSprite(config))
-		.pipe(gulp.dest('build/assets/svg'))
+		.pipe(gulp.dest('docs/assets/svg'))
 });
 
 gulp.task('html', function(){
 	return gulp.src(['src/**/*.pug', ...ignorePug])
 		.pipe(pug())
-		.pipe(gulp.dest('build'))
+		.pipe(gulp.dest('docs'))
 });
 
 gulp.task('vendor:js', function () {
     return gulp.src('src/assets/libs/**/*.js')
         .pipe(concat('vendor.js'))
-        .pipe(gulp.dest('build/assets'));
+        .pipe(gulp.dest('docs/assets'));
 });
 
 gulp.task('vendor:css', function () {
 	return gulp.src('src/assets/libs/**/*.css')
 		.pipe(concat('vendor.css'))
-		.pipe(gulp.dest('build/assets'));
+		.pipe(gulp.dest('docs/assets'));
 });
 
 gulp.task('sass', function () {
@@ -62,21 +55,21 @@ gulp.task('sass', function () {
 		.pipe(sass.sync().on('error', sass.logError))
 		.pipe(postcss(processors))
 		.pipe(gcmq())
-		.pipe(gulp.dest('build/assets'))
+		.pipe(gulp.dest('docs/assets'))
 		.pipe(browserSync.stream())
 });
 
 gulp.task('webpack', function () {
 	return gulp.src('./src/assets/index.js')
 		.pipe(webpack(require('./webpack.config.js')))
-		.pipe(gulp.dest('./build/assets'))
+		.pipe(gulp.dest('./docs/assets'))
 		.pipe(browserSync.stream());
 });
 
 gulp.task('serve', function() {
 	browserSync.init({
 		server: {
-			baseDir: "./build"
+			baseDir: "./docs"
 		}
 	});
 });
@@ -95,14 +88,14 @@ gulp.task('copy', function(){
 	return gulp.src([
 			'src/assets/**/*.{jpg,png,jpeg,gif}'
 		])
-	.pipe(gulp.dest('build/assets'))
+		.pipe(gulp.dest('docs/assets'))
 });
 
 gulp.task('clean', function() {
-	return del('build');
+	return del('docs');
 });
 
-gulp.task('build', gulp.parallel('html', 'sass', 'sprites', 'yaml', 'copy', 'vendor:js', 'vendor:css'));
+gulp.task('build', gulp.parallel('html', 'sass', 'sprites', 'copy', 'vendor:js', 'vendor:css'));
 
 gulp.task('start', gulp.parallel('webpack', 'watch', 'serve'));
 
