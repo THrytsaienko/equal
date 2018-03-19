@@ -4,12 +4,14 @@ include ../social-icons/social-icons
 include ../menu/menu
 
 
-mixin b-header(menuList, languagesList, socialList, classes)
+mixin b-header(menuList, languagesList, socialList, activeMenuIndex, classes)
 	+b.header(class=classes)
 		+e.container
 			+e.menu-burger
-				+e('svg').menu-icon.open(id="menu-icon")
-					use(xlink:href=asset('svg/symbol/svg/sprite.symbol.svg#menu'))
+				+e.menu-icon(id="menu-icon")
+					+e.menu-icon-top.open
+					+e.menu-icon-middle.open
+					+e.menu-icon-bottom.open
 				+e('span').menu-text Меню
 			+e.logo
 				+e('a').link(href="index.html")
@@ -29,7 +31,7 @@ mixin b-header(menuList, languagesList, socialList, classes)
 						+e('li').item
 							+e('a').link-lang(id= lang.id, href= lang.ref)= lang.text
 			+e.menu
-				+b-menu(menuList)
+				+b-menu(menuList, activeMenuIndex)
 			+e('p').email eqlagency@gmail.com
 			+e('p').phone +38 050 571 69 06
 			+e.icons

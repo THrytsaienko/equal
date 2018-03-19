@@ -1,9 +1,12 @@
 include ../../globals/data
 include ../../globals/mixins
 
-mixin b-menu(menuList)
+mixin b-menu(menuList, activeMenuIndex)
 	+b.menu
 		+e('ul').list
-			each it in menuList
+			each it, index in menuList
+				- var classes= ''
+				if index == activeMenuIndex
+					- classes = 'active'
 				+e('li').item
-					+e('a').link(id= it.id href= it.href, class= it.class)= it.text
+					+e('a').link(id= it.id href= it.href, class= classes)= it.text

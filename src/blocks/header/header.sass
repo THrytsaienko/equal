@@ -19,19 +19,52 @@
 			justify-content: space-around
 	&__menu-burger
 		padding-top: 27px
-	&__menu-icon
-		width: 20px
-		height: 20px
-		fill: #000
-		margin-bottom: -4px
+		position: relative
 		cursor: pointer
+	&__menu-icon
+		width: 16px
+		height: 12px
+		position: absolute
+		top: 30px
+		z-index: 10
+		&-top
+			content: ""
+			top: 0
+			left: 0px
+			width: 16px
+			height: 2px
+			position: absolute
+			background-color: #000
+			transform-origin: 0 0
+			transition: transform .3s ease-out
+		&-middle
+			top: 5px
+			left: 0px
+			width: 16px
+			height: 2px
+			position: absolute
+			background-color: #000
+			transition: all .3s ease-out
+			transform-origin: 0 50%
+		&-bottom
+			content: ""
+			bottom: 0px
+			left: 0px
+			width: 16px
+			height: 2px
+			position: absolute
+			background-color: #000
+			transform-origin: 0 100%
+			transition: transform .3s ease-out	
 	&__menu-text
 		text-transform: uppercase
 		font-weight: 700
 		color: #000
+		margin-left: 30px
 	&__logo
 		padding-top: 28px
 		padding-bottom: 60px
+		margin-left: -15px
 		z-index: 100
 		@media #{$tablet-land}
 			padding-bottom: 50px
@@ -42,9 +75,8 @@
 	&__logo-left-w,
 	&__logo-right-b
 		display: none
-
-
 	&__icons
+		visibility: hidden
 		.icons
 			padding-top: 30px
 			visibility: hidden
@@ -53,8 +85,6 @@
 				padding-bottom: 20px
 		.icon
 			fill: #000
-		.icon_cross
-			display: none
 	&__burger
 		position: absolute
 		top: 55px
@@ -118,17 +148,17 @@
 		.icon_facebook,
 		.icon_instagram
 			visibility: visible
-		.icon_cross
-			visibility: hidden
 	&__menu
 		.menu
+			&__item
+				margin-bottom: 7px
 			&__link
 				text-decoration: none
 				text-transform: uppercase
 				color: #000
 				font-weight: 700
 				font-size: 24px
-				.active
+				&.active
 					border-bottom: 3px solid #000
 
 .header_dark
@@ -149,11 +179,42 @@
 				justify-content: space-around
 		&__menu-burger
 			padding-top: 27px
+			cursor: pointer
 		&__menu-icon
-			width: 20px
-			height: 20px
-			fill: #000
-			margin-bottom: -4px
+			width: 16px
+			height: 12px
+			position: absolute
+			top: 30px
+			z-index: 10
+			&-top
+				content: ""
+				top: 0
+				left: 0px
+				width: 16px
+				height: 2px
+				position: absolute
+				background-color: #000
+				transform-origin: 0 0
+				transition: transform .3s ease-out
+			&-middle
+				top: 5px
+				left: 0px
+				width: 16px
+				height: 2px
+				position: absolute
+				background-color: #000
+				transition: all .3s ease-out
+				transform-origin: 0 50%
+			&-bottom
+				content: ""
+				bottom: 0px
+				left: 0px
+				width: 16px
+				height: 2px
+				position: absolute
+				background-color: #000
+				transform-origin: 0 100%
+				transition: transform .3s ease-out
 		&__menu-text
 			text-transform: uppercase
 			font-weight: 700
@@ -175,20 +236,7 @@
 			display: inline
 		&__icons
 			.icons
-				visibility: visible
-				padding-top: 27px
-			.icon
-				fill: #000
-				@media #{$phone}
-					margin-left: 0
-			.icon_instagram
 				visibility: hidden
-			.icon_facebook
-				display: none
-			.icon_cross
-				display: inline
-				@media #{$phone}
-					margin-right: 10px
 		&__burger
 			display: none
 		&__burger .header__icons
@@ -213,11 +261,42 @@
 				justify-content: space-around
 		&__menu-burger
 			padding-top: 27px
+			cursor: pointer
 		&__menu-icon
-			width: 20px
-			height: 20px
-			fill: #fff
-			margin-bottom: -4px
+			width: 16px
+			height: 12px
+			position: absolute
+			top: 30px
+			z-index: 10
+			&-top
+				content: ""
+				top: 0
+				left: 0px
+				width: 16px
+				height: 2px
+				position: absolute
+				background-color: #fff
+				transform-origin: 0 0
+				transition: transform .3s ease-out
+			&-middle
+				top: 5px
+				left: 0px
+				width: 16px
+				height: 2px
+				position: absolute
+				background-color: #fff
+				transition: all .3s ease-out
+				transform-origin: 0 50%
+			&-bottom
+				content: ""
+				bottom: 0px
+				left: 0px
+				width: 16px
+				height: 2px
+				position: absolute
+				background-color: #fff
+				transform-origin: 0 100%
+				transition: transform .3s ease-out
 		&__menu-text
 			text-transform: uppercase
 			font-weight: 700
@@ -250,8 +329,6 @@
 			.icon_facebook
 				@media #{$phone}
 					margin-right: 10px
-			.icon_cross
-				display: none
 		&__burger
 			display: none
 		&__burger .header__icons

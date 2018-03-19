@@ -15,4 +15,7 @@ mixin b-gallery-content(UMFData, imagesList)
 			+e.images
 				each item in imagesList
 					+e('figure').item(class= item.className)
-						+e('img').img(src=asset(item.img))
+						+e('picture').img
+							each picture in item.images
+								source(media=picture.media, srcset=asset(picture.img))
+							img.img(src=asset(item.singleImg))

@@ -1,8 +1,13 @@
 extends layouts/main
 
+append params	
+	- pageTitle = "Equal"
+	- activeMenuIndex = 99
+
+
 block content
-	+b-header(menuList, languagesList, socialList)
-	+b-mainSlider(mainSlider)
+	+b-header(menuList, languagesList, socialList, 99)
+	+b-mainSlider(mainSlider, socialList)
 	+b-mainGallery(mainGallery)
 	+b-team-slider(teamData)
 	+b-clients(clientsData)
