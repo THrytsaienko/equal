@@ -8,7 +8,7 @@ module.exports = {
 		app: './assets/index.js',
 	},
 	output: {
-		path: path.resolve(__dirname, './build/assets'),
+		path: path.resolve(__dirname, './docs/assets'),
 		filename: '[name].bundle.js',
 	},
 	module: {
@@ -25,7 +25,7 @@ module.exports = {
 		}]
 	},
 	devServer: {
-		contentBase: path.join(__dirname, "./build"),
+		contentBase: path.join(__dirname, "./docs"),
 		compress: true,
 		port: 9000
 	}
