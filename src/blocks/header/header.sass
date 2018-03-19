@@ -75,6 +75,23 @@
 	&__logo-left-w,
 	&__logo-right-b
 		display: none
+	&__logo-right-b
+		@media #{$tablet-land}
+			display: block
+			display: inline
+		@media #{$tablet-port}
+			display: block
+			display: inline
+		@media #{$phone}
+			display: block
+			display: inline
+	&__logo-right-w
+		@media #{$tablet-land}
+			display: none
+		@media #{$tablet-port}
+			display: none
+		@media #{$phone}
+			display: none
 	&__icons
 		visibility: hidden
 		.icons
