@@ -5,17 +5,17 @@ $(function() {
   $slides = $block.find('.carousel__slides');
 
   $slides.slick({
-    arrows: false,
+	arrows: false,
   });
 
   $prevButton = $('.carousel__button-prev');
   $nextButton = $('.carousel__button-next');
 
   $prevButton.click(function(){
-    $(this).closest($block).find($slides).slick('slickPrev');
+	$(this).closest($block).find($slides).slick('slickPrev');
   })
 
    $nextButton.click(function(){
-     $(this).closest($block).find($slides).slick('slickNext');
+	 $(this).closest($block).find($slides).slick('slickNext');
    })  
 });
