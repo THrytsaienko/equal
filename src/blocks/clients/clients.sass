@@ -7,6 +7,8 @@
 	max-width: 1240px
 	padding: 0 20px
 	margin-bottom: 100px
+	@media #{$phone}, #{$tablet-port}
+		margin-bottom: 60px
 	&__header
 		margin: 0px $gutter 50px $gutter
 		display: flex
@@ -24,6 +26,8 @@
 		justify-content: space-around
 		align-items: center
 		margin-top: 100px
+		@media #{$phone}, #{$tablet-port}
+			margin-top: 60px
 	&__link
 		flex-basis: 20%
 		text-align: center
