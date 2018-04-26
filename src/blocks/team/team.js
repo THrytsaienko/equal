@@ -2,10 +2,10 @@ $(function () {
 	    var $block;
 	    $block = $('.team-slider');
 	    if (!$block.length) return;
-	    $slides = $block.find('.team-slider__slides');
+	    var $slides = $block.find('.team-slider__slides');
 	    $slides.css("display", "block");
-	    $prevButton = $('.team-slider__button-prev');
-	    $nextButton = $('.team-slider__button-next');
+	    var $prevButton = $('.team-slider__button-prev');
+	    var $nextButton = $('.team-slider__button-next');
 
 	    $prevButton.click(function () {
 			$(this).closest($block).find($slides).slick('slickPrev');

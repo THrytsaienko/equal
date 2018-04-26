@@ -127,8 +127,8 @@ $(function () {
   if (!$block.length) return;
   var $slides = $block.find('.gallery-slider__slides');
   $slides.css("display", "block");
-  $prevButton = $('.gallery-slider__button-prev');
-  $nextButton = $('.gallery-slider__button-next');
+  var $prevButton = $('.gallery-slider__button-prev');
+  var $nextButton = $('.gallery-slider__button-next');
   $prevButton.click(function () {
     $(this).closest($block).find($slides).slick('slickPrev');
   });

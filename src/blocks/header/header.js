@@ -1,11 +1,11 @@
 $(function () {    
 	var headerInit = function (event, page) {        
 		if (page == undefined) page = document;        
-		$page = $(page);        
-		$block = $page.find('.header');        
+		var $page = $(page);        
+		var $block = $page.find('.header');        
 		if (!$block.length) return;        
-		$menuIcon = $block.find('.header__menu-burger');        
-		$burger = $block.find('.header__burger');        
+		var $menuIcon = $block.find('.header__menu-burger');        
+		var $burger = $block.find('.header__burger');        
 		var tl = new TimelineMax({            
 			paused: true,
 			onReverseComplete: function () {                
@@ -24,9 +24,9 @@ $(function () {    
 			ease: Power2.easeOut        
 		});
 
-		$iconTop = $('.header__menu-icon-top');
-		$iconMiddle = $('.header__menu-icon-middle');
-		$iconBottom = $('.header__menu-icon-bottom');
+		var $iconTop = $('.header__menu-icon-top');
+		var $iconMiddle = $('.header__menu-icon-middle');
+		var $iconBottom = $('.header__menu-icon-bottom');
 
 		var tlIconMenuTop = new TimelineMax({
 			paused: true
