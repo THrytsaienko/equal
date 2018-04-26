@@ -96,7 +96,10 @@ __webpack_require__(12);
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 // =============== b-clients script ===============
 $(document).ready(function () {
@@ -106,19 +109,23 @@ $(document).ready(function () {
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
 
 
 /***/ }),
 /* 3 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 $(function () {
   var $block;
   $block = $('.gallery-slider');
   if (!$block.length) return;
-  $slides = $block.find('.gallery-slider__slides');
+  var $slides = $block.find('.gallery-slider__slides');
   $slides.css("display", "block");
   $prevButton = $('.gallery-slider__button-prev');
   $nextButton = $('.gallery-slider__button-next');
@@ -161,13 +168,17 @@ $(function () {
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
 
 
 /***/ }),
 /* 5 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 // =============== b-mainGallery script ===============
 $(document).ready(function () {
@@ -208,7 +219,10 @@ function sizeImg(size, numW, numH) {
 
 /***/ }),
 /* 6 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 // =============== b-catalogue script ===============
 $(document).ready(function () {
@@ -273,7 +287,10 @@ function sizeImg(size, numW, numH) {
 
 /***/ }),
 /* 7 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 $(document).ready(function () {
   $('#ru').addClass('active');
@@ -285,16 +302,19 @@ $(document).ready(function () {
 
 /***/ }),
 /* 8 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 $(function () {
   var headerInit = function headerInit(event, page) {
     if (page == undefined) page = document;
-    $page = $(page);
-    $block = $page.find('.header');
+    var $page = $(page);
+    var $block = $page.find('.header');
     if (!$block.length) return;
-    $menuIcon = $block.find('.header__menu-burger');
-    $burger = $block.find('.header__burger');
+    var $menuIcon = $block.find('.header__menu-burger');
+    var $burger = $block.find('.header__burger');
     var tl = new TimelineMax({
       paused: true,
       onReverseComplete: function onReverseComplete() {
@@ -312,9 +332,9 @@ $(function () {
       x: 0,
       ease: Power2.easeOut
     });
-    $iconTop = $('.header__menu-icon-top');
-    $iconMiddle = $('.header__menu-icon-middle');
-    $iconBottom = $('.header__menu-icon-bottom');
+    var $iconTop = $('.header__menu-icon-top');
+    var $iconMiddle = $('.header__menu-icon-middle');
+    var $iconBottom = $('.header__menu-icon-bottom');
     var tlIconMenuTop = new TimelineMax({
       paused: true
     });
@@ -361,25 +381,30 @@ $(function () {
 
 /***/ }),
 /* 9 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
 
 
 /***/ }),
 /* 10 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
 
 
 /***/ }),
 /* 11 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 $(function () {
   var $block;
   $block = $('.carousel');
   if (!$block.length) return;
-  $slides = $block.find('.carousel__slides');
+  var $slides = $block.find('.carousel__slides');
   $slides.slick({
     arrows: false,
     infinite: true,
@@ -388,8 +413,8 @@ $(function () {
     autoplay: true,
     autoplaySpeed: 3000
   });
-  $prevButton = $('.carousel__button-prev');
-  $nextButton = $('.carousel__button-next');
+  var $prevButton = $('.carousel__button-prev');
+  var $nextButton = $('.carousel__button-next');
   $prevButton.click(function () {
     $(this).closest($block).find($slides).slick('slickPrev');
   });
@@ -400,16 +425,19 @@ $(function () {
 
 /***/ }),
 /* 12 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 $(function () {
   var $block;
   $block = $('.team-slider');
   if (!$block.length) return;
-  $slides = $block.find('.team-slider__slides');
+  var $slides = $block.find('.team-slider__slides');
   $slides.css("display", "block");
-  $prevButton = $('.team-slider__button-prev');
-  $nextButton = $('.team-slider__button-next');
+  var $prevButton = $('.team-slider__button-prev');
+  var $nextButton = $('.team-slider__button-next');
   $prevButton.click(function () {
     $(this).closest($block).find($slides).slick('slickPrev');
   });
